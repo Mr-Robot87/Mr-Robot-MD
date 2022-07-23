@@ -264,13 +264,13 @@ const reply = (teks) => {
 					Robot_MD.sendMessage(m.chat, { sticker: result }, { quoted: m })
 					}
 			}
-			for (let anju of vien){
+			for (let anju of voice){
 				if (budy === anju){
 					result = fs.readFileSync(`./Mr_Robot_Media/voice/${anju}.mp3`)
 					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
 					}
 			}
-			for (let anjh of imagi){
+			for (let anjh of image){
 				if (budy === anjh){
 					result = fs.readFileSync(`./Mr_Robot_Media/image/${anjh}.jpg`)
 					Robot_MD.sendMessage(m.chat, { image: result }, { quoted: m })
