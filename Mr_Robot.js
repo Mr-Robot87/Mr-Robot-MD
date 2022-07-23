@@ -109,8 +109,8 @@ const nexusnw = require('xfarr-api')
  let _darahOrg = JSON.parse(fs.readFileSync('./storage/user/darah.json'))
 
 //Database\\
-let stik = JSON.parse(fs.readFileSync('./database/sticker.json'));
-let vn = JSON.parse(fs.readFileSync('./database/voice.json'));
+let setik = JSON.parse(fs.readFileSync('./database/sticker.json'));
+let vien = JSON.parse(fs.readFileSync('./database/voice.json'));
 let Imagi = JSON.parse(fs.readFileSync('./database/image.json'))
 let videox = JSON.parse(fs.readFileSync('./database/video.json'))
 
@@ -258,13 +258,13 @@ const reply = (teks) => {
         }
 
         //auto reply 
-        for (let anji of stik){
+        for (let anji of setik){
 				if (budy === anji){
 					result = fs.readFileSync(`./Mr_Robot_Media/sticker/${anji}.webp`)
 					Robot_MD.sendMessage(m.chat, { sticker: result }, { quoted: m })
 					}
 			}
-			for (let anju of vn){
+			for (let anju of vien){
 				if (budy === anju){
 					result = fs.readFileSync(`./Mr_Robot_Media/voice/${anju}.mp3`)
 					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
