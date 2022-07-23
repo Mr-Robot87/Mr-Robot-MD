@@ -2128,7 +2128,7 @@ break
             }
             break
 		
-	case 'ytmp3': case 'getvideo': case 'ytvideo': case 'document': {
+	        case 'document': {
                 let { yta } = require('./lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
                 let quality = args[1] ? args[1] : '320kbps'
