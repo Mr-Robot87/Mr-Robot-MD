@@ -111,7 +111,7 @@ const nexusnw = require('xfarr-api')
 //Database\\
 let setik = JSON.parse(fs.readFileSync('./database/sticker.json'));
 let vien = JSON.parse(fs.readFileSync('./database/voice.json'));
-let Imagi = JSON.parse(fs.readFileSync('./database/image.json'))
+let imagi = JSON.parse(fs.readFileSync('./database/image.json'))
 let videox = JSON.parse(fs.readFileSync('./database/video.json'))
 
 //read database\\
