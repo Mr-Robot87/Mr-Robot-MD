@@ -3367,124 +3367,98 @@ reply("Success Changing Menu To "+q)
 }
 
                     break
-                     case 'alive': case 'bot':{
-                           	timestampe = speed();
-latensie = speed() - timestampe
- anu = ` `
-const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-                    templateMessage: {
-                        hydratedTemplate: {
-                            hydratedContentText: anu,
-                            
-                            hydratedFooterText: `
-│「 Hi 👋 」
-└┬❖ 「 ${pushname} 」
-┌┤✑  Shashi burina thaicho🎉
-││✑  🐦🖐️!!
-│└───────────────┈ ⳹
-│ 「 BOT INFO 」
-│✙ 𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
-│✙ 𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-│✙ 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${global.botname}
-│✙ 𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 : ${global.ownername}
-│✙ 𝗢𝘄𝗻𝗲𝗿 𝗡𝘂𝗺𝗯𝗲𝗿 : ${global.owner}
-│✙ 𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
-│✙ 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
-│✙ 𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
-└┬──────────────┈ ⳹
-   │✑  Please Select The Button Below
-   └───────────────┈ ⳹`,
-                            hydratedButtons: [{
-                                urlButton: {
-                                    displayText: 'YouTube📍',
-                                    url: `${myweb}`
-                                }
-                            }, {
-                            	urlButton: {
-                                displayText: 'Script🔖',
-                                    url: `${sc}`
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: '🍇All Menu🍇',
-                                    id: `${prefix}allmenu`
-                                }
-                                }, {
-                                quickReplyButton: {
-                                    displayText: '🍒List Menu🍒',
-                                    id: `${prefix}command`
-                                }
-                                }, {
-                                quickReplyButton: {
-                                    displayText: '👤Owner👤',
-                                    id: `${prefix}owner`
-                                }
-                            }]
-                        }
-                    }
-                }), { userJid: m.chat })
-                Robot_MD.relayMessage(m.chat, template.message, { messageId: template.key.id })
-                }
+                     case 'menu': case 'list':{
+                           	let buttons = [
+        {buttonId: `${prefix}allmenu`, buttonText: {displayText: '⫷ ALL MENU ⫸'}, type: 1},
+        {buttonId: `${prefix}alive`, buttonText: {displayText: '⫷ ALIVE ⫸'}, type: 1},
+        {buttonId: `${prefix}donate`, buttonText: {displayText: '⫷ INFO ⫸'}, type: 1}]
+    let buttonMessage = {
+        image: { url: 'https://i.ibb.co/fq9trJx/logo.jpg'},
+    caption: `
+┏━━━━━━━━━━━━━━━━━━━━━━
+┃  ᴹᴿ.𝚁𝙾𝙱𝙾𝚃 ʷʰᵃᵗˢᵃᵖᵖ ᵇᵒᵗ
+┗━━━━━━━━━━━━━━━━━━━━━━
+
+
+I Am 💝❄ᴹᴿ.𝚁𝙾𝙱𝙾𝚃❄️💝
+
+👨‍💻 ᴄᴏᴍᴍᴀɴᴅ ʟɪꜱᴛ 👨‍💻
+
+
+👨‍💻 Command:- .alive
+
+👨‍💻 Command:- .menu
+📖 Description:-get all command list
+
+👨‍💻 Command:- .song 
+📖 Description:- download song
+
+👨‍💻 Command:- .video
+📖 Description:- download videos
+
+👨‍💻 Command:- .sticker
+📖 Description:- create own sticker
+
+👨‍💻 Command:- .tomp3
+📖 Description:- video convert to mp3 
+
+👨‍💻 Command:- .emojimix 
+📖 Description:- mix two emojies
+
+👨‍💻 Command:- .getmusic 
+📖 Description:-download yt videos to mp3
+
+👨‍💻 Command:- .getvideo 
+📖 Description:- dawnlod yt videos
+
+👨‍💻 Command:- .toimage
+📖 Description:- sticker convert to image
+
+👨‍💻 Command:- .ytsearch
+📖 Description:-search anithing in youtube
+               
+             😌⃟⌘࿔⃝❤️🌹⃝✥⃟☺️᭄ꦿ
+
+「 Created By Misara Sathsara  𖠌」━⭓
+
+
+Ex ට පිං පිණිස මා විසින් සාදන ලදි..`,
+	    
+	    footer: 'Robot MD',
+buttons,
+headerType: 4
+}
+Robot_MD.sendMessage(m.chat, buttonMessage, { quoted: m })
+}
 break
-            case 'list': case 'menu': {
-            	timestampe = speed();
-latensie = speed() - timestampe
-                anu = ``
-const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-                    templateMessage: {
-                        hydratedTemplate: {
-                            hydratedContentText: anu,
-                           
-                            hydratedFooterText: `
+
+
+
+            case 'robot': case 'alive': {
+            	let buttons = [
+        {buttonId: `${prefix}allmenu`, buttonText: {displayText: '⫷ ALL MENU ⫸'}, type: 1},
+        {buttonId: `${prefix}alive`, buttonText: {displayText: '⫷ ALIVE ⫸'}, type: 1},
+        {buttonId: `${prefix}donate`, buttonText: {displayText: '⫷ INFO ⫸'}, type: 1}]
+    let buttonMessage = {
+        image: { url: 'https://i.ibb.co/fq9trJx/logo.jpg'},
+    caption: `
 ┌─❖
 │「 Hi 👋 」
 └┬❖ 「 ${pushname} 」
 ┌┤✑  Daijobka sempai?😄
 │└───────────────┈ ⳹
 │ 「 BOT INFO 」
-│✙ 𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
-│✙ 𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-│✙ 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${global.botname}
-│✙ 𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 : ${global.ownername}
-│✙ 𝗢𝘄𝗻𝗲𝗿 𝗡𝘂𝗺𝗯𝗲𝗿 : ${global.owner}
-│✙ 𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
-│✙ 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
-│✙ 𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
+
 └┬──────────────┈ ⳹
    │✑  Please Select The Button Below
    └───────────────┈ ⳹`,
-                            hydratedButtons: [{
-                                urlButton: {
-                                    displayText: 'YouTube📍',
-                                    url: `${myweb}`
-                                }
-                            }, {
-                            	urlButton: {
-                                displayText: 'Script🔖',
-                                    url: `${sc}`
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: 'All Menu🎉',
-                                    id: `${prefix}allmenu`
-                                }
-                                }, {
-                                quickReplyButton: {
-                                    displayText: 'List Menu⭐',
-                                    id: `${prefix}command`
-                                }
-                                }, {
-                                quickReplyButton: {
-                                    displayText: 'Owner🐦',
-                                    id: `${prefix}owner`
-                                }
-                            }]
-                        }
-                    }
-                }), { userJid: m.chat })
-                Robot_MD.relayMessage(m.chat, template.message, { messageId: template.key.id })
-                }
-                break
+                            footer: 'Robot MD',
+buttons,
+headerType: 4
+}
+Robot_MD.sendMessage(m.chat, buttonMessage, { quoted: m })
+}
+break
                 case 'command': {
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
