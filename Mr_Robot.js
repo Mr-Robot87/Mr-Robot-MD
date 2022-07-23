@@ -3375,9 +3375,8 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
                         hydratedTemplate: {
                             hydratedContentText: anu,
-                            locationMessage: {
-                            jpegThumbnail: fs.readFileSync('./Mr_Robot_Media/gojo.jpg')},
-                            hydratedFooterText: `┌─❖
+                            
+                            hydratedFooterText: `
 │「 Hi 👋 」
 └┬❖ 「 ${pushname} 」
 ┌┤✑  Shashi burina thaicho🎉
@@ -3435,8 +3434,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
                         hydratedTemplate: {
                             hydratedContentText: anu,
-                            locationMessage: {
-                            jpegThumbnail: fs.readFileSync('./Mr_Robot_Media/gojo.jpg')}, 
+                           
                             hydratedFooterText: `
 ┌─❖
 │「 Hi 👋 」
