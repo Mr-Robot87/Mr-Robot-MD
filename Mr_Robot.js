@@ -258,7 +258,7 @@ const reply = (teks) => {
         }
 
         //auto reply 
-        for (let anji of setik){
+        for (let anji of sticker){
 				if (budy === anji){
 					result = fs.readFileSync(`./Mr_Robot_Media/sticker/${anji}.webp`)
 					Robot_MD.sendMessage(m.chat, { sticker: result }, { quoted: m })
