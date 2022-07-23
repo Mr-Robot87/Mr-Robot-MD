@@ -87,7 +87,7 @@ async function startRobot_MD() {
         if (!Robot_MD.public && !mek.key.fromMe && chatUpdate.type === 'notify') return
         if (mek.key.id.startsWith('BAE5') && mek.key.id.length === 16) return
         m = smsg(Robot_MD, mek, store)
-        require("./Gojosensei")(Robot_MD, m, chatUpdate, store)
+        require("./Mr_Robot")(Robot_MD, m, chatUpdate, store)
         } catch (err) {
             console.log(err)
         }
