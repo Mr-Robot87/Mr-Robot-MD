@@ -3369,11 +3369,7 @@ reply("Success Changing Menu To "+q)
                     break
 		
 		
-	case 'alive': {
-		result = fs.readFileSync(`./Mr_Robot_Media/voice/alive.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-	           break
+	
 		
 	case 'hi': case 'hii': case 'හායි': {
 		result = fs.readFileSync(`./Mr_Robot_Media/voice/Hi.mp3`)
@@ -3457,6 +3453,9 @@ break
 
 
             case 'robot': case 'alive': {
+		    result = fs.readFileSync(`./Mr_Robot_Media/voice/alive.mp3`)
+					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
+		    
             	let buttons = [
         {buttonId: `${prefix}allmenu`, buttonText: {displayText: '⫷ ALL MENU ⫸'}, type: 1},
         {buttonId: `${prefix}alive`, buttonText: {displayText: '⫷ ALIVE ⫸'}, type: 1},
