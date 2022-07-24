@@ -2115,31 +2115,31 @@ break
 	    case 'ytmp3': case 'getmusic': case 'ytaudio': {
                 let { yta } = require('./lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
-                let quality = args[1] ? args[1] : '320kbps'
+                let quality = args[1] ? args[1] : '128kbps'
                 let media = await yta(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                Robot_MD.sendImage(m.chat, media.thumb, `📝 Title : ${media.title}\n📝 File Size : ${media.filesizeF}\n📝 Url : ${isUrl(text)}\n📝 Ext : MP3\n📝 Resolution : ${args[1] || '320kbps'}`, m)
+                Robot_MD.sendImage(m.chat, media.thumb, `📝 Title : ${media.title}\n📝 File Size : ${media.filesizeF}\n📝 Url : ${isUrl(text)}\n📝 Ext : MP3\n📝 Resolution : ${args[1] || '128kbps'}`, m)
                 Robot_MD.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
 		
-	     case 'document': {
+	     case 'document': case 'ytmp3': case 'getmusic': case 'ytaudio' {
 		 let { yta } = require('./lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
-                let quality = args[1] ? args[1] : '320kbps'
+                let quality = args[1] ? args[1] : '128kbps'
                 let media = await yta(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                Robot_MD.sendImage(m.chat, media.thumb, `📝 Title : ${media.title}\n📝 File Size : ${media.filesizeF}\n📝 Url : ${isUrl(text)}\n📝 Ext : MP3\n📝 Resolution : ${args[1] || '320kbps'}`, m)
+                Robot_MD.sendImage(m.chat, media.thumb, `📝 Title : ${media.title}\n📝 File Size : ${media.filesizeF}\n📝 Url : ${isUrl(text)}\n📝 Ext : MP3\n📝 Resolution : ${args[1] || '128kbps'}`, m)
                 Robot_MD.sendMessage(m.chat, { document: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
 	    }
 	    break
             case 'ytmp4': case 'getvideo': case 'ytvideo': {
                 let { ytv } = require('./lib/y2mate')
-                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`)
-                let quality = args[1] ? args[1] : '720p'
+                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 480p`)
+                let quality = args[1] ? args[1] : '480p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `📝 Title : ${media.title}\n📝 File Size : ${media.filesizeF}\n📝 Url : ${isUrl(text)}\n📝 Ext : MP3\n📝 Resolution : ${args[1] || '720p'}` }, { quoted: m })
+                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `📝 Title : ${media.title}\n📝 File Size : ${media.filesizeF}\n📝 Url : ${isUrl(text)}\n📝 Ext : MP3\n📝 Resolution : ${args[1] || '480p'}` }, { quoted: m })
             }
             break
 		
@@ -2161,10 +2161,10 @@ break
                 if (!m.quoted.isBaileys) throw `Can Only Reply To Meessages From Bots`
                 let urls = quoted.text.match(new RegExp(/(?:https?:\/\/)?(?:youtu\.be\/|(?:www\.|m\.)?youtube\.com\/(?:watch|v|embed|shorts)(?:\.php)?(?:\?.*v=|\/))([a-zA-Z0-9\_-]+)/, 'gi'))
                 if (!urls) throw`Maybe The Message You Replied Does Not Contain The Video Search Result`
-                let quality = args[1] ? args[1] : '720p'
+                let quality = args[1] ? args[1] : '480p'
                 let media = await ytv(urls[text - 1], quality)
                 if (media.filesize >= 100000) return reply('File Over Limit '+util.format(media))
-                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `📝 Title : ${media.title}\n📝 File Size : ${media.filesizeF}\n📝 Url : ${urls[text - 1]}\n📝 Ext : MP3\n📝 Resolution : ${args[1] || '720p'}` }, { quoted: m })
+                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `📝 Title : ${media.title}\n📝 File Size : ${media.filesizeF}\n📝 Url : ${urls[text - 1]}\n📝 Ext : MP3\n📝 Resolution : ${args[1] || '480p'}` }, { quoted: m })
             }
             break
             case 'pinterest': {
@@ -3482,10 +3482,10 @@ break
 
 「 Hi 👋 」
  🔊「 ${pushname} 」
- I Am Alive Now...👨🏻‍💻
- How Can Help You...❓❔
+ *I Am Alive Now...*👨🏻‍💻
+ _How Can Help You..._❓❔
  
- 𝐏𝐎𝐖𝐄𝐑𝐃 𝐁𝐘 𝐌𝐫.𝐑𝐎𝐁𝐎𝐓 `,
+ 𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐌𝐫.𝐑𝐎𝐁𝐎𝐓-𝐌𝐃 `,
                      
                             footer: 'Robot MD',
 buttons,
