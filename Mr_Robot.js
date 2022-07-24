@@ -2103,7 +2103,7 @@ break
 🔊 Channel : ${anu.author.url}
 🔊 Description : ${anu.description}
 🔊 Url : ${anu.url}`,
-                    footer: Robot_Md.user.name,
+                    footer: Robot_MD.user.name,
                     buttons: buttons,
                     headerType: 4
                 }
