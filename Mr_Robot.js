@@ -2118,7 +2118,7 @@ break
                 let quality = args[1] ? args[1] : '320kbps'
                 let media = await yta(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                Robot_MD.sendImage(m.chat, media.thumb, `🐦 Title : ${media.title}\n🐦 File Size : ${media.filesizeF}\n🐦 Url : ${isUrl(text)}\n🐦 Ext : MP3\n🐦 Resolution : ${args[1] || '320kbps'}`, m)
+                Robot_MD.sendImage(m.chat, media.thumb, `📝 Title : ${media.title}\n📝 File Size : ${media.filesizeF}\n📝 Url : ${isUrl(text)}\n📝 Ext : MP3\n📝 Resolution : ${args[1] || '320kbps'}`, m)
                 Robot_MD.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
@@ -2129,8 +2129,8 @@ break
                 let quality = args[1] ? args[1] : '320kbps'
                 let media = await yta(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                Robot_MD.sendImage(m.chat, media.thumb, `🐦 Title : ${media.title}\n🐦 File Size : ${media.filesizeF}\n🐦 Url : ${isUrl(text)}\n🐦 Ext : MP3\n🐦 Resolution : ${args[1] || '320kbps'}`, m)
-                Robot_MD.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'document/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
+                Robot_MD.sendImage(m.chat, media.thumb, `📝 Title : ${media.title}\n📝 File Size : ${media.filesizeF}\n📝 Url : ${isUrl(text)}\n📝 Ext : MP3\n📝 Resolution : ${args[1] || '320kbps'}`, m)
+                Robot_MD.sendMessage(m.chat, { document: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
 	    }
 	    break
             case 'ytmp4': case 'getvideo': case 'ytvideo': {
@@ -2139,7 +2139,7 @@ break
                 let quality = args[1] ? args[1] : '720p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🐦 Title : ${media.title}\n🐦 File Size : ${media.filesizeF}\n🐦 Url : ${isUrl(text)}\n🐦 Ext : MP3\n🐦 Resolution : ${args[1] || '720p'}` }, { quoted: m })
+                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `📝 Title : ${media.title}\n📝 File Size : ${media.filesizeF}\n📝 Url : ${isUrl(text)}\n📝 Ext : MP3\n📝 Resolution : ${args[1] || '720p'}` }, { quoted: m })
             }
             break
 		
@@ -2150,7 +2150,7 @@ break
                 let quality = args[1] ? args[1] : '128kbps'
                 let media = await yta(urls[text - 1], quality)
                 if (media.filesize >= 100000) return reply('File Over Limit '+util.format(media))
-                Robot_MD.sendImage(m.chat, media.thumb, `🐦 Title : ${media.title}\n🐦 File Size : ${media.filesizeF}\n🐦 Url : ${urls[text - 1]}\n🐦 Ext : MP3\n🐦 Resolution : ${args[1] || '128kbps'}`, m)
+                Robot_MD.sendImage(m.chat, media.thumb, `📝 Title : ${media.title}\n📝 File Size : ${media.filesizeF}\n📝 Url : ${urls[text - 1]}\n📝 Ext : MP3\n📝 Resolution : ${args[1] || '128kbps'}`, m)
                 Robot_MD.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
@@ -2164,7 +2164,7 @@ break
                 let quality = args[1] ? args[1] : '720p'
                 let media = await ytv(urls[text - 1], quality)
                 if (media.filesize >= 100000) return reply('File Over Limit '+util.format(media))
-                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🐦 Title : ${media.title}\n🐦 File Size : ${media.filesizeF}\n🐦 Url : ${urls[text - 1]}\n🐦 Ext : MP3\n🐦 Resolution : ${args[1] || '720p'}` }, { quoted: m })
+                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `📝 Title : ${media.title}\n📝 File Size : ${media.filesizeF}\n📝 Url : ${urls[text - 1]}\n📝 Ext : MP3\n📝 Resolution : ${args[1] || '720p'}` }, { quoted: m })
             }
             break
             case 'pinterest': {
@@ -2172,7 +2172,7 @@ break
 		let { pinterest } = require('./lib/scraper')
                 anu = await pinterest(text)
                 result = anu[Math.floor(Math.random() * anu.length)]
-                Robot_MD.sendMessage(m.chat, { image: { url: result }, caption: '🐦 Media Url : '+result }, { quoted: m })
+                Robot_MD.sendMessage(m.chat, { image: { url: result }, caption: '📝 Media Url : '+result }, { quoted: m })
             }
             break
 case 'webtonsearch': case 'webtoon':
