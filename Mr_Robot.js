@@ -3687,7 +3687,7 @@ reply("Success Changing Menu To "+q)
 	}
 		break
 		
-	case 'Gothya': case 'gothya': case 'ගෝතයා': { case 'පරයා': {
+	case 'Gothya': case 'gothya': case 'ගෝතයා': case 'පරයා': {
 			result = fs.readFileSync(`./Mr_Robot_Media/voice/Gothya.mp3`)
 					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
 	}
