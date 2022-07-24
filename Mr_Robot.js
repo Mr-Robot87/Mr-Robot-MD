@@ -3866,7 +3866,7 @@ case 'allmenu': {
                             hydratedFooterText: `${pushname}`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'YouTube📍',
+                                    displayText: 'facebook📍',
                                     url: `${myweb}`
                                 }
                             }, {
