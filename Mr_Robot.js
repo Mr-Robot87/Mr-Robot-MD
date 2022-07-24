@@ -2086,10 +2086,43 @@ break
                 let buttons = [
                     {buttonId: `ytmp3 ${anu.url}`, buttonText: {displayText: '🎶Audio🎶'}, type: 1},
                     
-                  {buttonId: `document ${anu.url}`, buttonText: {displayText: '📜Document📜'}, type: 1},    
+                  {buttonId: `document ${anu.url}`, buttonText: {displayText: '📜Document📜'}, type: 1}] 
                     
-                    {buttonId: `ytmp4 ${anu.url}`, buttonText: {displayText: '📽️Video📽️'}, type: 1}
-                ]
+                  
+                
+                let buttonMessage = {
+                    image: { url: anu.thumbnail },
+                    caption: `
+🔊 Title : ${anu.title}
+🔊 Ext : Search
+🔊 ID : ${anu.videoId}
+🔊 Duration : ${anu.timestamp}
+🔊 Viewes : ${anu.views}
+🔊 Uploaded On : ${anu.ago}
+🔊 Author : ${anu.author.name}
+🔊 Channel : ${anu.author.url}
+🔊 Description : ${anu.description}
+🔊 Url : ${anu.url}`,
+                    footer: Robot_MD.user.name,
+                    buttons: buttons,
+                    headerType: 4
+                }
+                Robot_MD.sendMessage(m.chat, buttonMessage, { quoted: m })
+            }
+            break
+		
+		case 'video': {
+                if (!text) return reply(`Example : ${prefix + command} අල්ලන් යන්න බැරි අතක්`)
+                let yts = require("yt-search")
+                let search = await yts(text)
+                let anu = search.videos[0]
+                let buttons = [
+                    {buttonId: `ytmp4 ${anu.url}`, buttonText: {displayText: '480p'}, type: 1},
+                    
+                  {buttonId: `ytmp412 ${anu.url}`, buttonText: {displayText: '720p'}, type: 1}] 
+                    
+                  
+                
                 let buttonMessage = {
                     image: { url: anu.thumbnail },
                     caption: `
@@ -2139,7 +2172,19 @@ break
                 let quality = args[1] ? args[1] : '480p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `📝 Title : ${media.title}\n📝 File Size : ${media.filesizeF}\n📝 Url : ${isUrl(text)}\n📝 Ext : MP3\n📝 Resolution : ${args[1] || '480p'}` }, { quoted: m })
+                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `📝 Title : ${media.title}\n📝 File Size : ${media.filesizeF}\n📝 Url : ${isUrl(text)}\n📝 Ext : Mp4\n📝 Resolution : ${args[1] || '480p'}` }, { quoted: m })
+            }
+            break
+		
+		
+		
+		case 'ytmp412': {
+                let { ytv } = require('./lib/y2mate')
+                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 480p`)
+                let quality = args[1] ? args[1] : '720p'
+                let media = await ytv(text, quality)
+                if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
+                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `📝 Title : ${media.title}\n📝 File Size : ${media.filesizeF}\n📝 Url : ${isUrl(text)}\n📝 Ext : MP4\n📝 Resolution : ${args[1] || '720p'}` }, { quoted: m })
             }
             break
 		
