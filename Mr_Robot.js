@@ -3575,11 +3575,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										"description": "Displays The List Of Main Features",
 										"rowId": `${prefix}groupmenu`
 										},
-									{
-										"title": "✳️Rpg Menu✳️",
-										"description": "Displays The List Of Rpg Features",
-										"rowId": `${prefix}rpgmenu`
-									},
+									
 									{
 										"title": "⬇️Download Menu⬇️",
 										"description": "Displays The List Of Download Features",
@@ -3589,21 +3585,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										"title": "👁️‍🗨️Search Menu👁️‍🗨️",
 										"description": "Displays The List Of Searching Features",
 										"rowId": `${prefix}searchmenu`
-									},
-									{
-											"title": "🌀Random Menu🌀",
-										"description": "Displays The List Of Random Features",
-										"rowId": `${prefix}randommenu`
-										},
-										{
-											"title": "💠Random Anime Menu💠",
-										"description": "Displays The List Of Random Anime Features",
-										"rowId": `${prefix}randomanimemenu`
-										},
-										{
-											"title": "🕹️Fun Menu🕹️",
-										"description": "Displays The List Of Fun Features",
-										"rowId": `${prefix}funmenu`
+																	
 										},
 										{
 											"title": "🔁Convert Menu🔁",
@@ -3614,46 +3596,16 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 											"title": "♻️Database Menu♻️",
 										"description": "Displays The List Of Database Features",
 										"rowId": `${prefix}databasemenu`
-										},
-										{
-											"title": "🔰Voice Changer Menu🔰",
-										"description": "Displays The List Of Voice Changing Features",
-										"rowId": `${prefix}voicechangermenu`
+										
 										},
 										{
 											"title": "☯️TXT-to-IMG Menu☯️",
 										"description": "Displays The List Of Textpro Features",
 										"rowId": `${prefix}textpromenu`
-										},
-										{
-											"title": "⚜️Islamic Menu⚜️",
-										"description": "Displays The List Of Islamic Features",
-										"rowId": `${prefix}islamicmenu`
-										},
-										{
-											"title": "🛑Horoscope Menu🛑",
-										"description": "Displays The List Of Horoscope Features",
-										"rowId": `${prefix}horoscopemenu`
+										 
 										}
-								]
-							},
-							{
-								"title": "Chat With Fellow Users",
-								"rows": [
-									{
-										"title": "Anonymous Chat Menu",
-										"description": "Displays The List Of Anonymous Chat Features",
-										"rowId": `${prefix}anonymouschatmenu`
-									}
-								]
-							},
-							{
-								"title": "Credit",
-								"rows": [
-									{
-										"title": "Thanks To",
-										"description": "Displays The List Of Credit Of The Bot !!",
-										"rowId": `${prefix}tqtt`
+								
+							
 									}
 								]
 							}
