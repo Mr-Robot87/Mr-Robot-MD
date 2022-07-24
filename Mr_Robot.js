@@ -3603,7 +3603,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										"description": "Displays The List Of Textpro Features",
 										"rowId": `${prefix}textpromenu`
 										 
-										}
+									
 								
 							
 									}
