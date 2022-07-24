@@ -2126,7 +2126,7 @@ break
                 let media = await yta(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
                 Robot_MD.sendImage(m.chat, media.thumb, `🐦 Title : ${media.title}\n🐦 File Size : ${media.filesizeF}\n🐦 Url : ${isUrl(text)}\n🐦 Ext : MP3\n🐦 Resolution : ${args[1] || '320kbps'}`, m)
-                Robot_MD.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/document', fileName: `${media.title}.mp3` }, { quoted: m })
+                Robot_MD.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'document/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
 	    }
 	    break
             case 'ytmp4': case 'getvideo': case 'ytvideo': {
