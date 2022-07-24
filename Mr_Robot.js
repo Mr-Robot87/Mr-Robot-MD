@@ -2077,37 +2077,41 @@ break
         })
         }
         break
-	    case 'play': case 'song': case 'ytplay': {
-                if (!text) return reply(`Example : ${prefix + command} Stay`)
+	    
+            case 'play': case 'song': case 'ytplay': {
+                if (!text) return reply(`Example : ${prefix + command} අල්ලන් යන්න බැරි අතක්`)
                 let yts = require("yt-search")
                 let search = await yts(text)
                 let anu = search.videos[0]
                 let buttons = [
                     {buttonId: `ytmp3 ${anu.url}`, buttonText: {displayText: '🎶Audio🎶'}, type: 1},
-                    {buttonId: `ytmp3 ${anu.url}`, buttonText: {displayText: 'Document'}, type: 1},
-		    {buttonId: `ytmp4 ${anu.url}`, buttonText: {displayText: '📽️Video📽️'}, type: 1}
-		    ]
-                
+                    
+                  {buttonId: `document ${anu.url}`, buttonText: {displayText: '📜Document📜'}, type: 1},    
+                    
+                    {buttonId: `ytmp4 ${anu.url}`, buttonText: {displayText: '📽️Video📽️'}, type: 1}
+                ]
                 let buttonMessage = {
                     image: { url: anu.thumbnail },
                     caption: `
-🔉 Title : ${anu.title}
-🔉 Ext : Search
-🔉 ID : ${anu.videoId}
-🔉 Duration : ${anu.timestamp}
-🔉 Viewes : ${anu.views}
-🔉 Uploaded On : ${anu.ago}
-🔉 Author : ${anu.author.name}
-🔉 Channel : ${anu.author.url}
-🔉 Description : ${anu.description}
-🔉 Url : ${anu.url}`,
-                    footer: Robot_MD.user.name,
+🔊 Title : ${anu.title}
+🔊 Ext : Search
+🔊 ID : ${anu.videoId}
+🔊 Duration : ${anu.timestamp}
+🔊 Viewes : ${anu.views}
+🔊 Uploaded On : ${anu.ago}
+🔊 Author : ${anu.author.name}
+🔊 Channel : ${anu.author.url}
+🔊 Description : ${anu.description}
+🔊 Url : ${anu.url}`,
+                    footer: Robot_Md.user.name,
                     buttons: buttons,
                     headerType: 4
                 }
                 Robot_MD.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
+		
+		
 	    case 'ytmp3': case 'getmusic': case 'ytaudio': {
                 let { yta } = require('./lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
@@ -2126,7 +2130,7 @@ break
                 let media = await yta(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
                 Robot_MD.sendImage(m.chat, media.thumb, `🐦 Title : ${media.title}\n🐦 File Size : ${media.filesizeF}\n🐦 Url : ${isUrl(text)}\n🐦 Ext : MP3\n🐦 Resolution : ${args[1] || '128kbps'}`, m)
-                Robot_MD.sendMessage(m.chat, { document: { url: media.dl_link }, mimetype: 'document/audio', fileName: `${media.title}.mp3` }, { quoted: m })
+                Robot_MD.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'document/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
 	    }
 	    break
             case 'ytmp4': case 'getvideo': case 'ytvideo': {
@@ -2135,7 +2139,7 @@ break
                 let quality = args[1] ? args[1] : '720p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🐦 Title : ${media.title}\n🐦 File Size : ${media.filesizeF}\n🐦 Url : ${isUrl(text)}\n🐦 Ext : MP3\n🐦 Resolution : ${args[1] || '360p'}` }, { quoted: m })
+                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🐦 Title : ${media.title}\n🐦 File Size : ${media.filesizeF}\n🐦 Url : ${isUrl(text)}\n🐦 Ext : MP3\n🐦 Resolution : ${args[1] || '720p'}` }, { quoted: m })
             }
             break
 		
