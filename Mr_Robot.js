@@ -3772,7 +3772,7 @@ break
 		    result = fs.readFileSync(`./Mr_Robot_Media/voice/alive.mp3`)
 					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
 		                           	let buttons = [
-        {buttonId: `${prefix}allmenu`, buttonText: {displayText: '📁 ALL MENU 📁'}, type: 1}]
+        {buttonId: `${prefix}menu`, buttonText: {displayText: '📁 ALL MENU 📁'}, type: 1}]
        
     let buttonMessage = {
         image: { url: 'https://i.ibb.co/fq9trJx/logo.jpg'},
