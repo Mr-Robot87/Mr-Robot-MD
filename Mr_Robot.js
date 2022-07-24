@@ -3628,29 +3628,29 @@ case 'allmenu': {
   	anu = `
 ┏━「 *${botname}* 」━━⭓ 
 ┃╔══☯︎「 MAIN 」☯︎
-┃╠ ${prefix}alive
-┃╠ ${prefix}script
-┃╠ ${prefix}speedtest
-┃╠ ${prefix}ping
-┃╠ ${prefix}owner
-┃╠ ${prefix}menu
-┃╠ ${prefix}delete
-┃╠ ${prefix}chatinfo
-┃╠ ${prefix}quoted
-┃╠ ${prefix}listpc
-┃╠ ${prefix}listgc
-┃╠ ${prefix}donate
-┃╠ ${prefix}report [bug]
+┃╠ ${prefix}👨🏻‍💻alive
+┃╠ ${prefix}👨🏻‍💻script
+┃╠ ${prefix}👨🏻‍💻speedtest
+┃╠ ${prefix}👨🏻‍💻ping
+┃╠ ${prefix}👨🏻‍💻owner
+┃╠ ${prefix}👨🏻‍💻menu
+┃╠ ${prefix}👨🏻‍💻delete
+┃╠ ${prefix}👨🏻‍💻chatinfo
+┃╠ ${prefix}👨🏻‍💻quoted
+┃╠ ${prefix}👨🏻‍💻listpc
+┃╠ ${prefix}👨🏻‍💻listgc
+┃╠ ${prefix}👨🏻‍💻donate
+┃╠ ${prefix}👨🏻‍💻report [bug]
 ┃╠══✪「 OWNER 」 ☯︎
-┃╠ ${prefix}chat [option]
-┃╠ ${prefix}join [link]
-┃╠ ${prefix}leave
-┃╠ ${prefix}block [user]
-┃╠ ${prefix}unblock [user]
-┃╠ ${prefix}bcgroup [text]
-┃╠ ${prefix}bcall [text]
-┃╠ ${prefix}setppbot [image]
-┃╠ ${prefix}setexif
+┃╠ ${prefix}📡chat [option]
+┃╠ ${prefix}📡join [link]
+┃╠ ${prefix}📡leave
+┃╠ ${prefix}📡block [user]
+┃╠ ${prefix}📡unblock [user]
+┃╠ ${prefix}📡bcgroup [text]
+┃╠ ${prefix}📡bcall [text]
+┃╠ ${prefix}📡setppbot [image]
+┃╠ ${prefix}📡setexif
 ┃╠══✪「 GROUP 」 ☯︎      
 ┃╠${prefix}grouplink
 ┃╠${prefix}ephemeral [option]
