@@ -2123,7 +2123,7 @@ break
             }
             break
 		
-	     case 'document': case 'ytmp3': case 'getmusic': case 'ytaudio' {
+	    case 'document': {
 		 let { yta } = require('./lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
                 let quality = args[1] ? args[1] : '128kbps'
