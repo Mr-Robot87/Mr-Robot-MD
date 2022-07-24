@@ -3435,7 +3435,7 @@ reply("Success Changing Menu To "+q)
 		
 	
 		
-	case 'hi': case 'hii': case 'හායි': {
+	        case 'hi': case 'hii': case 'හායි': {
 		result = fs.readFileSync(`./Mr_Robot_Media/voice/Hi.mp3`)
 					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
 	}
@@ -3444,10 +3444,48 @@ reply("Success Changing Menu To "+q)
 		
 		
 		
+		case 'Adareyi': case 'Adarey': case 'ආදරෙයි': {
+		result = fs.readFileSync(`./Mr_Robot_Media/voice/Adarey.mp3`)
+					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
+	}
+	           break
 		
 		
+	        case 'Adarei': case 'adareyi': {
+		result = fs.readFileSync(`./Mr_Robot_Media/voice/Adarei.mp3`)
+					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
+	}
+		break
 		
+	       case 'Akke': case 'akka': case 'අක්කෙ': case 'අක්කා': {
+	       result = fs.readFileSync(`./Mr_Robot_Media/voice/Akke.mp3`)
+					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
+	}
+		break
 		
+	        case 'Baba Eka': case 'Eka': case 'Eka maru': case 'baba': case 'බබා ඒක': case 'ඒක': {
+	        result = fs.readFileSync(`./Mr_Robot_Media/voice/Baba eka.mp3`)
+					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
+	}
+		break
+		
+	case 'Baduwa': case 'Baduva': case 'baduwa': case 'බඩුව': {
+			result = fs.readFileSync(`./Mr_Robot_Media/voice/Baduwa.mp3`)
+					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
+	}
+		break
+		
+	case 'Balaganin': case 'balaganin': case 'blgnin': case'බලාගනින්': case 'බලාගන්න': {
+			result = fs.readFileSync(`./Mr_Robot_Media/voice/Balaganin.mp3`)
+					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
+	}
+		break
+		
+	case 'Blagena': case'balagena': case 'blgena': case 'බලාගෙන': {
+			result = fs.readFileSync(`./Mr_Robot_Media/voice/Balagena.mp3`)
+					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
+	}
+		break
 		
                      case 'menu': case 'list':{
                            	let buttons = [
