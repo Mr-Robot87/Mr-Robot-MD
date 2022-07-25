@@ -3,61 +3,44 @@
 </p>
 
 
-
-
-<!-- Start via Heroku -->
-<b><details><summary>Start via Heroku</summary></b>
-
-* Scan QR In Your Whatsapp From [Here](https://replit.com/@ishansandeepa18/MR-ROBOT-MD?v=1)
-* Fork This Repo By Clicking [Here](https://github.com/Mr-Robot87/fork)
-* then Deploy The Bot From [Here](https://heroku.com/deploy)
-* Wait 5-10 Min To Deploy 
-* After Deploying On The Worker And Check The Logs
-
-</details>
+## *I Am ❤️ᴹᴿ.𝚁𝙾𝙱𝙾𝚃✔*
 
 
 
-<!-- Installation via Termux -->
-<b><details><summary>Installation on Termux</summary></b>
-```bash
-> apt update
-> apt upgrade
-> pkg update && pkg upgrade
-> pkg install bash
-> pkg install libwebp
-> pkg install git -y
-> pkg install nodejs -y 
-> pkg install ffmpeg -y 
-> pkg install wget
-> pkg install imagemagick -y
-> git clone https://github.com/nexusNw/Gojo-Satoru
-> cd Gojo-Satoru
-> npm install
-```
-</details>
-
-<!-- Edit -->
-<b><details><summary>Edit settings.js</summary></b>
-```bash
-global.APIKeys = {
-	'https://zenzapis.xyz': 'YOURAPIKEY',
-}
-  
-global.owner = ["9181XXXXXX"]
-global.ownername = ["YourName"]
-```
-</details>
+## හරි, අපි එහෙනම් බලමු මේ බොට් Deploy කර ගන්න විදිය ... 
 
 
-<!-- 24hrs-->
-<b><details><summary>For 24 Hours Activation</summary></b>
+ * ✏️ මේ දේට ඔයාට ඕන වෙනවා,
 
-```bash
-npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
-```
+         1.) Git Hub Acount එකක්.
 
-</details>
+         2.) Heraku Acount එකක්.
+
+
+* ✏️ මුලින්ම ඔයා Git Hub එකට Log වෙලා ඉන්න ඊට පස්සෙ DARK-ISHU-MD Frock කර ගන්න...
+
+* ✏️ ඊට පස්සෙ ඔයා ඔයාගේ  Whtsapp එකෙන් Qr එක Scan කරන්න... ඊට පස්සෙ ඔයාගෙ නම්බරෙන්, ඔයාටම Massege එකක් එයි..ඒ Document එකක්.. ඒ තමයි ඔයාගෙ Session එක... 
+
+* ✏️  ඊට පස්සෙ ඒක Open කරලා. ඒකේ තියන ටික Coppy කර ගන්න..
+
+* ✏️ ඔයා Fock කරපු Git Hub එකට යන්න Session .json කියලා එකක් ඇති ඒකට ඔයාගෙ Session එක Upload කරන්න... 
+
+* ✏️ හරි දැන් වැඩේ ඉවරයි.. ඔයාට ඕනනම් Setting.js වල තියන Setting ඔයාට ඕන විදියට වෙනස් කර ගන්න පුලුවන් ..... හබැයි තියන ඔක්කොම දේවල් නම් වෙනස් කරන්න යන්න එපා. එහෙම                උනොත්     බොටා වැඩ කරන්නෙ නැති වෙයි ඔන්න හරිද ... Owner Name , Owner Number මෙන්න මේ වගේ දේවල් විතරක් වෙනස් කරන්න මතක තියා ගන්න...
+
+
+---- 
+
+
+
+
+<b>👉  මෙතනින් qr එක Scan 🔎 කරන්න...  ➡➡➡     [මෙතන ටච් කරන්න...](https://replit.com/@ishansandeepa18/DARK-ISHU-MD)
+
+
+
+<b>👉  මෙතනිම් බොට්ව Deploy 💻 කරන්න... ➡➡➡ [මෙතන ටච් කරන්න...](https://heroku.com/deploy)
+
+
+
 
 ----
 
@@ -103,15 +86,6 @@ npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 
 </details><hr>
 
-----	
-<details><summary>spaekie</summary><br>
-	
-	hgudg
-	hfsgf
-	hfdsf
-	
-	</details>
-	
 
 	
 	
