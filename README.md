@@ -17,7 +17,7 @@
          2.) Heraku Acount එකක්.
 
 
-* ✏️ මුලින්ම ඔයා Git Hub එකට Log වෙලා ඉන්න ඊට පස්සෙ DARK-ISHU-MD Frock කර ගන්න...
+* ✏️ මුලින්ම ඔයා Git Hub එකට Log වෙලා ඉන්න ඊට පස්සෙ ᴹᴿ.𝚁𝙾𝙱𝙾𝚃-MD Frock කර ගන්න...
 
 * ✏️ ඊට පස්සෙ ඔයා ඔයාගේ  Whtsapp එකෙන් Qr එක Scan කරන්න... ඊට පස්සෙ ඔයාගෙ නම්බරෙන්, ඔයාටම Massege එකක් එයි..ඒ Document එකක්.. ඒ තමයි ඔයාගෙ Session එක... 
 
@@ -33,11 +33,11 @@
 
 
 
-<b>👉  මෙතනින් qr එක Scan 🔎 කරන්න...  ➡➡➡     [මෙතන ටච් කරන්න...](https://replit.com/@ishansandeepa18/DARK-ISHU-MD)
+<b>👉  මෙතනින් qr එක Scan 🔎 කරන්න...      [click Here...](https://replit.com/@ishansandeepa18/DARK-ISHU-MD)
 
 
 
-<b>👉  මෙතනිම් බොට්ව Deploy 💻 කරන්න... ➡➡➡ [මෙතන ටච් කරන්න...](https://heroku.com/deploy)
+<b>👉  මෙතනිම් බොට්ව Deploy 💻 කරන්න...  [click Here...](https://heroku.com/deploy)
 
 
 
@@ -50,19 +50,9 @@
 | Features |  Availability |
 | :------: |  :----------: |
 |   Convert     |       ✅     |
-|   Database     |       ✅     |
 |   Owner     |       ✅    |
-|   Islami     |       ✅     |
 |   Downloader     |       ✅     |
-|   Webzone     |       ✅[      |
 |   Searching     |       ✅      |
-|   Textpro     |       ✅      |
-|   Ephoto     |       ✅     |
-|   Anime Web     |       ✅      |
-|   Stalker     |       ✅      |
-|   Random Text     |       ✅     |
-|   Random Image     |       ✅     |
-|   Nekos Life     |       ✅      |
 |   More Nsfw     |       ✅      |
 |   Creator     |       ✅      |
 
@@ -72,20 +62,23 @@
 ----
 
 <!-- Contact Owner -->
-<b><details><summary>Contact</summary></b>
+<b><details><summary> 📞 Contact</summary></b>
 
 ## ```Connect With Me```
-<p align="center">
-<a href="https://wa.me/94701030507"><img src="https://img.shields.io/badge/Contact Misara Sathsara-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
- /><br>
-</p>
-
+              
+	     Mr.Sathsara
+	
+	                +94701030507
 	
 </details>
 
 
 </details><hr>
 
+</details><hr>
 
+## විශේශ ස්තූතිය ....
+
+* ❤ Ishan Sandeepa
 	
 	
