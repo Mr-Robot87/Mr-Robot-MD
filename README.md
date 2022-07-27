@@ -9,7 +9,6 @@
 
   
 ```bash
-Add FFmpeg to PATH environment variable
 ```
 </details>
 
@@ -25,21 +24,6 @@ Add FFmpeg to PATH environment variable
 
 </details>
 
-```
-</details>
-
-```
-</details>
-
-
-<!-- 24hrs-->
-<b><details><summary>For 24 Hours Activation</summary></b>
-
-```bash
-npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
-```
-
-</details>
 
 ----
 
