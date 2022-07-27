@@ -60,4 +60,7 @@
 * [Ishan Sandeepa](https://github.com/ishansandeepa757)
 
 
-License: [MIT](https://github.com/Gojo-Satoru/LICENSE)
+License
+
+* Misara Sathsara
+*
