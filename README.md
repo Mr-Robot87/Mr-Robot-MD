@@ -56,7 +56,7 @@
 
 </details><hr>
 
-## Thanks To
+## SpecialThanks To
 * [`Ishan Sandeepa`]
 
 
