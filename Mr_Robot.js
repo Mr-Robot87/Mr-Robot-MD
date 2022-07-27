@@ -202,11 +202,11 @@ module.exports = Robot_MD = async (Robot_MD, m, chatUpdate, store) => {
 	
 	//group target \\
 const reply = (teks) => {
-            Robot_MD.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Gojo-Satoru`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./Mr_Robot_Media/robot.jpg`),"sourceUrl": "https://telegra.ph/file/8bbe8a7de5c351dfcb077.jpg"}}}, { quoted: m})
+            Robot_MD.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Mr-Robot`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./Mr_Robot_Media/robot.jpg`),"sourceUrl": "https://i.ibb.co/fq9trJx/logo.jpg"}}}, { quoted: m})
         }
         
         const replay = (teks) => {
-            Robot_MD.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Gojo-Satoru`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./Mr_Robot_Media/robot.jpg`),"sourceUrl": "https://telegra.ph/file/8bbe8a7de5c351dfcb077.jpg"}}}, { quoted: m})
+            Robot_MD.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Mr-Robot`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./Mr_Robot_Media/robot.jpg`),"sourceUrl": "https://i.ibb.co/fq9trJx/logo.jpg"}}}, { quoted: m})
         }
 	
         //Public & Self\\
