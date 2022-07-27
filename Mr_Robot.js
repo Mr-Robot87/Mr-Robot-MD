@@ -3388,275 +3388,7 @@ typemenu = 'catalog'
 reply("Success Changing Menu To "+q)
 }
 
-                    break
-		
-		
-	
-		
-	case 'hi': case 'hii': case 'හායි': case 'hy':  case 'Hy':{
-		result = fs.readFileSync(`./Mr_Robot_Media/voice/Hi.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-	           break
-		
-		
-		
-		
-		case 'Adareyi': case 'Adarey': case 'ආදරෙයි': {
-		result = fs.readFileSync(`./Mr_Robot_Media/voice/Adarey.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-	           break
-		
-		
-	        case 'Adarei': case 'adareyi': {
-		result = fs.readFileSync(`./Mr_Robot_Media/voice/Adarei.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	       case 'Akke': case 'akka': case 'අක්කෙ': case 'අක්කා': {
-	       result = fs.readFileSync(`./Mr_Robot_Media/voice/Akke.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	        case 'Baba': case 'baba': case 'බබා ඒක': case 'Bb': {
-	        result = fs.readFileSync(`./Mr_Robot_Media/voice/Baba eka.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'Baduwa': case 'Baduva': case 'baduwa': case 'බඩුව': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Baduwa.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'Balaganin': case 'balaganin': case 'blgnin': case'බලාගනින්': case 'බලාගන්න': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Balaganin.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'Blagena': case'balagena': case 'blgena': case 'බලාගෙන': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Balagena.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'Balli': case 'balli': case 'balla': case 'බැල්ලි': case 'බැළ්ළි': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Balli.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'Bb ek': case 'baba eka': case 'බබා ': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Bb ek.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'Yaluvane': case 'kattiya': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Bot.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'Bye': case 'by': case 'බායි': case 'parissamin': case 'පරිස්සමින්': case 'ටටා': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Bye.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'manika': case 'Manika': case 'මැණීක': case 'මැනික': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Bich.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'Devavada': case 'denavada': case 'දෙනවද': case 'Denawada': case 'denawada': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Denavada.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'En nane': case 'en nane': case 'nane': case 'එන් නෑ නේ': case 'එන් නැ නෙ': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/en nane.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'epa venavane': case 'Epa venavane': case 'epa venava': case 'Mata nam ba': case 'එපා වෙනවා': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Epa vela.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'esawa': case 'chandi': case '': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Esawa.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'fuck': case 'pak': case 'පක්': case 'Fuck': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Fuck.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-		
-	case 'Gahanava': case 'gahanava': case 'ගහනවා': case 'බලාගමු': case 'Gahanawa': case 'gahanavawa': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Gahanawa.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'gm': case 'Gm': case 'Good morning': case 'ගුඩ්මෝනින්': case 'ගුම් මොනින්': case 'good morning': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Gm.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-		
-	case 'ha ha': case 'Ha ': case 'ok': case 'hari': case ' Hari': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Ha ha.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		 
-	case 'හා හා': case 'එල': case 'හරි බන්': case 'එලම': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Hako.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'Hello': case 'helo':case 'hello': case 'හෙලෝ': case 'හෙලො': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Hello.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'i love you': case 'I love You': case 'කැමතියි': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/I love you.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-		
-	case 'kariya': case 'කැරියා': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Kariya.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'Kellekda': case 'kellek ': case 'Kellek': case 'කෙල්ලෙක්': case 'කෙම්ලෙක්': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Kellekda.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-		
-	case 'kohomada': case 'Kohomada': case 'kohomd': case 'කොහොමද': case 'කොහොමෙයි': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Kohomada.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'Love': case 'love': case 'ආදරෙයි': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Love.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'Mk': case 'mk' : case 'mokada karanne': case 'Mokada Karanne': case 'මොකද කරන්නෙ': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Mk.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'Mokak': case 'mokak': case 'mokek': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Mokek.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-		
-	case 'na': case 'Na na': case 'Naha': case 'naha': case 'නෑ': case 'නැහැ': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Na na.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'nah': case 'Nah': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Nah.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'valaththaya': case 'වලත්තයා': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Namasthe.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'Nangi': case 'Palayan yanna': case 'dupiya': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Namgi.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'pala': case 'පල': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Pala.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-		
-		
-	case 'hukanna': case 'Hukanna': case 'හුකන්නා': case 'හුත්තා':  case 'huththa': case 'Huththa': { 
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Hukanna.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'hm': case 'hmm': case 'hum': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Hmm.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'Misara': case 'misara': case 'මිසර': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Raviya.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'හ්ම්': case 'හුම්': case 'හ්ම්ම්': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Hum.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-		
-	case 'gn': case 'Gn': case 'Good Night': case 'good night': case 'ගුඩ් නයිට්': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Gn.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-		
-	case 'Gothya': case 'gothya': case 'ගෝතයා': case 'පරයා': {
-			result = fs.readFileSync(`./Mr_Robot_Media/voice/Gothya.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
-						     
-						     
-		   case 'guti': case 'Guti': case 'ගුටි': {
-			      result = fs.readFileSync(`./Mr_Robot_Media/voice/Guti.mp3`)
-					     Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-	}
-		break
+ break
 						     
 	
 		
@@ -3668,36 +3400,29 @@ reply("Success Changing Menu To "+q)
         image: { url: 'https://i.ibb.co/fq9trJx/logo.jpg'},
    
     caption:`
-┏━━━━━━━━━━━━━━━━━━━━━━
-┃  ᴹᴿ.𝚁𝙾𝙱𝙾𝚃 ʷʰᵃᵗˢᵃᵖᵖ ᵇᵒᵗ
-┗━━━━━━━━━━━━━━━━━━━━━━
-I Am 💝❄ᴹᴿ.𝚁𝙾𝙱𝙾𝚃❄️💝
-👨‍💻 ᴄᴏᴍᴍᴀɴᴅ ʟɪꜱᴛ 👨‍💻
-👨‍💻 Command:- .alive
-👨‍💻 Command:- .menu
-📖 Description:-get all command list
-👨‍💻 Command:- .song 
-📖 Description:- download song
-👨‍💻 Command:- .video
-📖 Description:- download videos
-👨‍💻 Command:- .sticker
-📖 Description:- create own sticker
-👨‍💻 Command:- .tomp3
-📖 Description:- video convert to mp3 
-👨‍💻 Command:- .emojimix 
-📖 Description:- mix two emojies
-👨‍💻 Command:- .getmusic 
-📖 Description:-download yt videos to mp3
-👨‍💻 Command:- .getvideo 
-📖 Description:- dawnlod yt videos
-👨‍💻 Command:- .toimage
-📖 Description:- sticker convert to image
-👨‍💻 Command:- .ytsearch
-📖 Description:-search anithing in youtube
-               
-             😌⃟⌘࿔⃝❤️🌹⃝✥⃟☺️᭄ꦿ
-「 Created By Misara Sathsara  𖠌」━⭓
-Ex ට පිං පිණිස මා විසින් සාදන ලදි..`,
+I Am 💝❄ᴹᴿ.𝚁𝙾𝙱𝙾𝚃❄💝
+
+😈 ᴄᴏᴍᴍᴀɴᴅ ʟɪꜱᴛ 😈
+
+ *Command:-* .alive
+ *Command:-* .menu
+ *Command:-* .song
+ *Command:-* .video
+‍ *Command:-* .sticker
+‍ *Command:-* .tomp3
+‍ *Command:-* .emojimix 
+‍ *Command:-* .getmusic 
+‍ *Command:-* .getvideo 
+‍ *Command:-* .toimage
+‍ *Command:-* .ytsearch 
+ ╔══☯︎Gruop Command 👇
+ *Command:-* .grouplink
+ *Command:-* .setgcpp
+ *Command:-* .setname
+ *Command:-* .add
+ *Command:-* .kick
+ *Command:-* .promote
+ *Command:-* .demote  `,
 	    
 	    footer: 'Robot MD',
 buttons,
@@ -3710,9 +3435,7 @@ break
 
 
             case 'robot': case 'alive': {
-		    result = fs.readFileSync(`./Mr_Robot_Media/voice/alive.mp3`)
-					Robot_MD.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
-		                           	let buttons = [
+		          let buttons = [
         {buttonId: `${prefix}menu`, buttonText: {displayText: 'MENU '}, type: 1}]
        
     let buttonMessage = {
