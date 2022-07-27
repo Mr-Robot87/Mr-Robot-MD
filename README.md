@@ -57,7 +57,7 @@
 </details><hr>
 
 ## Special Thanks To
-* [Ishan Sandeepa](https://replit.com/@ishansandeepa18/QUEEN-ASHIYA-MD?v=1)
+* [Ishan Sandeepa](https://github.com/ishansandeepa757)
 
 
 License: [MIT](https://github.com/Gojo-Satoru/LICENSE)
