@@ -13,14 +13,20 @@
 </details>
 
 
-<!-- Start via Heroku -->
-<b><details><summary>Start via Heroku</summary></b>
+<b>👉  මෙතනින් qr එක Scan 🔎 කරන්න... 
 
-* Scan QR In Your Whatsapp From [Here](https://replit.com/@ishansandeepa18/MR-ROBOT-MD?v=1)
-* Fork This Repo By Clicking [Here](https://github.com/Mr-Robot87/Mr-Robot-MD/fork)
-* then Deploy The Bot From [Here](https://heroku.com/deploy)
-* Wait 5-10 Min To Deploy 
-* After Deploying On The Worker And Check The Logs
+[![Run on Repl.it](https://repl.it/badge/github/quiec/whatsAlfa)](https://replit.com/@ishansandeepa18/MR-ROBOT-MD?v=1)
+
+
+
+
+----
+
+
+
+<b>👉  මෙතනිම් බොට්ව Deploy 💻 කරන්න...
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 </details>
 
