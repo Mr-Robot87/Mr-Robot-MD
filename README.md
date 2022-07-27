@@ -16,8 +16,8 @@
 <!-- Start via Heroku -->
 <b><details><summary>Start via Heroku</summary></b>
 
-* Scan QR In Your Whatsapp From [Here](https://replit.com/@nexusNw/M-D-SCANNER-V2?v=1?outputonly=1&lite=1#index.js)
-* Fork This Repo By Clicking [Here](https://github.com/nexusNw/Gojo-Satoru/fork)
+* Scan QR In Your Whatsapp From [Here](https://replit.com/@ishansandeepa18/MR-ROBOT-MD?v=1)
+* Fork This Repo By Clicking [Here](https://github.com/Mr-Robot87/Mr-Robot-MD/fork)
 * then Deploy The Bot From [Here](https://heroku.com/deploy)
 * Wait 5-10 Min To Deploy 
 * After Deploying On The Worker And Check The Logs
@@ -57,7 +57,7 @@
 </details><hr>
 
 ## Special Thanks To
-* [Ishan Sandeepa](https://github.com/ishansandeepa757)
+* Ishan Sandeepa        [Click Here](https://github.com/ishansandeepa757)
 
 
 ----
