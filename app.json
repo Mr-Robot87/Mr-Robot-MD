@@ -2,7 +2,7 @@
   "name": "Mr-Robot",
   "description": "whatsapp md bot ",
   "repository": "https://github.com/Mr-Robot87",
-  "logo": "https://i.ibb.co/LtJgDdH/Whats-App-Image-2022-07-27-at-3-48-44-PM.jpg",
+  "logo": "https://i.ibb.co/fq9trJx/logo.jpg",
   "keywords": ["nodejs", "bot", "whatsapp bot", "whatsapp automation", "multi device"],
   "buildpacks": [
     {
