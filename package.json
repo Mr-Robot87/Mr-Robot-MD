@@ -1,5 +1,5 @@
 {
-  "name": "Mr-Robot",
+  "name": "Gojo-Satoru",
   "version": "2.0.0",
   "description": "WhatsApp Using Lib Baileys Multi Device",
   "main": "index.js",
@@ -11,14 +11,14 @@
     "termux",
     "whatsapp",
     "2022",
-    "Mrrobot",
+    "GojoSatoru",
     "base",
     "baileys-md",
     "bot",
     "bot-md",
     "multi-device"
   ],
-  "author": "Mr-Robot",
+  "author": "NexusNw",
   "license": "MIT",
   "dependencies": {
     "@adiwajshing/baileys": "^4.0.1",
@@ -65,10 +65,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mr-Robot87.git"
+    "url": "git+https://github.com/nexusNw/Gojo-Satoru.git"
   },
   "bugs": {
-    "url": "https://github.com/Mr-Robot87/issues"
+    "url": "https://github.com/nexusNw/Gojo-Satoru/issues"
   },
-  "homepage": "https://github.com/Mr-Robot87/Mr-Robot-MD#readme"
+  "homepage": "https://github.com/nexusNw/Gojo-Satoru#readme"
 }
