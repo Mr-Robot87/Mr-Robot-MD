@@ -1,35 +1,63 @@
 <p align="center">
-<img src="https://i.ibb.co/LtJgDdH/Whats-App-Image-2022-07-27-at-3-48-44-PM.jpg" alt="nz" width="350"/>
+<img src="https://i.ibb.co/fq9trJx/logo.jpg" alt="nz" width="400"/>
 </p>
 
-## I Am 💝❄ᴹᴿ.𝚁𝙾𝙱𝙾𝚃❄💝
 
 
----
 
-  
+<!-- Start via Heroku -->
+<b><details><summary>Start via Heroku</summary></b>
+
+* Scan QR In Your Whatsapp From [Here](https://replit.com/@nexusNw/M-D-SCANNER-V2?v=1?outputonly=1&lite=1#index.js)
+* Fork This Repo By Clicking [Here](https://github.com/nexusNw/Gojo-Satoru/fork)
+* then Deploy The Bot From [Here](https://heroku.com/deploy)
+* Wait 5-10 Min To Deploy 
+* After Deploying On The Worker And Check The Logs
+
+</details>
+
+
+
+<!-- Installation via Termux -->
+<b><details><summary>Installation on Termux</summary></b>
 ```bash
+> apt update
+> apt upgrade
+> pkg update && pkg upgrade
+> pkg install bash
+> pkg install libwebp
+> pkg install git -y
+> pkg install nodejs -y 
+> pkg install ffmpeg -y 
+> pkg install wget
+> pkg install imagemagick -y
+> git clone https://github.com/nexusNw/Gojo-Satoru
+> cd Gojo-Satoru
+> npm install
+```
+</details>
+
+<!-- Edit -->
+<b><details><summary>Edit settings.js</summary></b>
+```bash
+global.APIKeys = {
+	'https://zenzapis.xyz': 'YOURAPIKEY',
+}
+  
+global.owner = ["9181XXXXXX"]
+global.ownername = ["YourName"]
 ```
 </details>
 
 
-<b>👉  මෙතනින් qr එක Scan 🔎 කරන්න... 
+<!-- 24hrs-->
+<b><details><summary>For 24 Hours Activation</summary></b>
 
-[![Run on Repl.it](https://repl.it/badge/github/quiec/whatsAlfa)](https://replit.com/@ishansandeepa18/MR-ROBOT-MD?v=1)
-
-
-
-
-----
-
-
-
-<b>👉  මෙතනිම් බොට්ව Deploy 💻 කරන්න...
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+```bash
+npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
+```
 
 </details>
-
 
 ----
 
@@ -38,10 +66,22 @@
 	
 | Features |  Availability |
 | :------: |  :----------: |
-|   Convert     |       ✅     
+|   Convert     |       ✅     |
+|   Database     |       ✅     |
+|   Owner     |       ✅    |
+|   Islami     |       ✅     |
 |   Downloader     |       ✅     |
+|   Webzone     |       ✅[      |
 |   Searching     |       ✅      |
-|   Sticker     |       ✅      |
+|   Textpro     |       ✅      |
+|   Ephoto     |       ✅     |
+|   Anime Web     |       ✅      |
+|   Stalker     |       ✅      |
+|   Random Text     |       ✅     |
+|   Random Image     |       ✅     |
+|   Nekos Life     |       ✅      |
+|   More Nsfw     |       ✅      |
+|   Creator     |       ✅      |
 
 </details>
 
@@ -53,23 +93,11 @@
 
 ## ```Connect With Me```
 <p align="center">
-<a href="https://wa.me/94701030507"><img src="https://img.shields.io/badge/Contact Mr.Sathsara-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
-<a /><br>
+<a href="https://wa.me/94701030507"><img src="https://img.shields.io/badge/Contact Misara Sathsara-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+ /><br>
 </p>
 
 </details>
 
 
 </details><hr>
-
-## Special Thanks To
-* Ishan Sandeepa        [Click Here](https://github.com/ishansandeepa757)
-
-
-----
-
-
-License
-
-* Misara Sathsara
-
