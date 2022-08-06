@@ -3926,8 +3926,6 @@ await Robot_MD.send5ButImg(from, `` + '' + ' ', `
 break
 		
 		case 'fbaudio': {
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
                   if (!text) return reply(`Where is the link?\nExample: ${prefix + command} https://fb.watch/eEudfpC3Wz/`)
                   if (!q.includes('fb')) return reply(`මෙය Facebook Link එකක් නොවේ. කරුණාකර වලංගු Link එකක් ඇතුලත් කරන්න!`)
                   if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
@@ -3945,8 +3943,7 @@ if (isBanChat) return reply(mess.banChat)
 
 
             case 'fbvideo': {
-                if (isBan) return reply(mess.ban)	 			
-             if (isBanChat) return reply(mess.banChat)
+           
                                if (!text) return reply(`Where is the link?\nExample: ${prefix + command} https://fb.watch/eEudfpC3Wz/`)
                                if (!q.includes('f')) return reply(`මෙය Facebook Link එකක් නොවේ. කරුණාකර වලංගු Link එකක් ඇතුලත් කරන්න!`)
                                if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
@@ -3966,11 +3963,10 @@ if (isBanChat) return reply(mess.banChat)
 
 
                          case 'fbdoc': {
-                            if (isBan) return reply(mess.ban)	 			
-                         if (isBanChat) return reply(mess.banChat)
-                                           if (!text) return reply(`Where is the link?\nExample: ${prefix + command} https://fb.watch/eEudfpC3Wz/`)
-                                           if (!q.includes('f')) return reply(`මෙය Facebook Link එකක් නොවේ. කරුණාකර වලංගු Link එකක් ඇතුලත් කරන්න!`)
-                                           if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
+                          
+                         if (!text) return reply(`Where is the link?\nExample: ${prefix + command} https://fb.watch/eEudfpC3Wz/`)
+                         if (!q.includes('f')) return reply(`මෙය Facebook Link එකක් නොවේ. කරුණාකර වලංගු Link එකක් ඇතුලත් කරන්න!`)
+                         if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
                                            
                                          
                                            
@@ -3986,8 +3982,7 @@ if (isBanChat) return reply(mess.banChat)
 
 
              case 'fb': case 'facebook': {
-                if (isBan) return reply(mess.ban)	 			
-             if (isBanChat) return reply(mess.banChat)
+           
         
                                if (!text) return reply(`Where is the link?\nExample: ${prefix + command} https://fb.watch/eEudfpC3Wz/`)
                                if (!q.includes('f')) return reply(`මෙය Facebook Link එකක් නොවේ. කරුණාකර වලංගු Link එකක් ඇතුලත් කරන්න!`)
@@ -4024,8 +4019,7 @@ if (isBanChat) return reply(mess.banChat)
 
 
                          case 'tiktok': {     	    
-                            if (isBan) return reply(mess.ban)	 			
-                         if (isBanChat) return reply(mess.banChat)
+                        
                                       if (!text) return reply(`Where is the link?`)
                                       if (!q.includes('tiktok.com')) return reply(`මෙය Tiktok Link එකක් නොවේ. කරුණාකර වලංගු Link එකක් ඇතුලත් කරන්න!`)
                                       if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
@@ -4058,8 +4052,7 @@ if (isBanChat) return reply(mess.banChat)
 
 
                          case 'tiktokmp3': {
-                            if (isBan) return reply(mess.ban)	 			
-                         if (isBanChat) return reply(mess.banChat)
+                        
 
                                         
                                            if (!text) return reply(`Where is the link?\nExample: ${prefix + command} https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
@@ -4078,8 +4071,7 @@ if (isBanChat) return reply(mess.banChat)
 
 
                                      case 'tiktokdoc': {
-                                        if (isBan) return reply(mess.ban)	 			
-                                     if (isBanChat) return reply(mess.banChat)
+                                    
             
                                                     
                                                        if (!text) return reply(`Where is the link?\nExample: ${prefix + command} https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
@@ -4099,8 +4091,7 @@ if (isBanChat) return reply(mess.banChat)
 
 
                                      case 'tiktokvideo': {
-                                        if (isBan) return reply(mess.ban)	 			
-                                     if (isBanChat) return reply(mess.banChat)
+                                      
                                                        if (!text) return reply(`Where is the link?\nExample: ${prefix + command} https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
                                                        if (!q.includes('tiktok')) return reply(`මෙය Tiktok Link එකක් නොවේ. කරුණාකර වලංගු Link එකක් ඇතුලත් කරන්න!`)
                                                        if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
