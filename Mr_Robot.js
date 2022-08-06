@@ -2054,9 +2054,9 @@ break
                 let search = await yts(text)
                 let anu = search.videos[0]
                 let buttons = [
-                    {buttonId: `ytmp3 ${anu.url}`, buttonText: {displayText: '??Audio??'}, type: 1},
+                    {buttonId: `ytmp3 ${anu.url}`, buttonText: {displayText: '♬Audio♬'}, type: 1},
                     
-                  {buttonId: `document ${anu.url}`, buttonText: {displayText: '??Document??'}, type: 1}] 
+                  {buttonId: `document ${anu.url}`, buttonText: {displayText: '♬Document♬'}, type: 1}] 
                     
                   
                 
@@ -3981,13 +3981,13 @@ break
                                      break
 
 
-             case 'fb': case 'facebook': {
+                             case 'fb': case 'facebook': {
            
         
                                if (!text) return reply(`Where is the link?\nExample: ${prefix + command} https://fb.watch/eEudfpC3Wz/`)
                                if (!q.includes('f')) return reply(`මෙය Facebook Link එකක් නොවේ. කරුණාකර වලංගු Link එකක් ඇතුලත් කරන්න!`)
                                if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
-                               let noh = require('@bochilteam/scraper')                
+                               let noh = require('@bochilteam/scraper')                 
                                       noh.savefrom(`${text}`).then(async (anu) => { 
                                let buttons = [
                                 {buttonId: `fbvideo ${text}`, buttonText: {displayText: '♬Video♬'}, type: 1},
