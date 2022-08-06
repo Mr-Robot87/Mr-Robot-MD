@@ -2063,16 +2063,16 @@ break
                 let buttonMessage = {
                     image: { url: anu.thumbnail },
                     caption: `
-?? Title : ${anu.title}
-?? Ext : Search
-?? ID : ${anu.videoId}
-?? Duration : ${anu.timestamp}
-?? Viewes : ${anu.views}
-?? Uploaded On : ${anu.ago}
-?? Author : ${anu.author.name}
-?? Channel : ${anu.author.url}
-?? Description : ${anu.description}
-?? Url : ${anu.url}`,
+♪♪ Title : ${anu.title}
+♪♪ Ext : Search
+♪♪ ID : ${anu.videoId}
+♪♪ Duration : ${anu.timestamp}
+♪♪ Viewes : ${anu.views}
+♪♪ Uploaded On : ${anu.ago}
+♪♪ Author : ${anu.author.name}
+♪♪ Channel : ${anu.author.url}
+♪♪ Description : ${anu.description}
+♪♪ Url : ${anu.url}`,
                     footer: Robot_MD.user.name,
                     buttons: buttons,
                     headerType: 4
@@ -2096,16 +2096,16 @@ break
                 let buttonMessage = {
                     image: { url: anu.thumbnail },
                     caption: `
-?? Title : ${anu.title}
-?? Ext : Search
-?? ID : ${anu.videoId}
-?? Duration : ${anu.timestamp}
-?? Viewes : ${anu.views}
-?? Uploaded On : ${anu.ago}
-?? Author : ${anu.author.name}
-?? Channel : ${anu.author.url}
-?? Description : ${anu.description}
-?? Url : ${anu.url}`,
+♪♪ Title : ${anu.title}
+♪♪ Ext : Search
+♪♪ ID : ${anu.videoId}
+♪♪ Duration : ${anu.timestamp}
+♪♪ Viewes : ${anu.views}
+♪♪ Uploaded On : ${anu.ago}
+♪♪ Author : ${anu.author.name}
+♪♪ Channel : ${anu.author.url}
+♪♪ Description : ${anu.description}
+♪♪ Url : ${anu.url}`,
                     footer: Robot_MD.user.name,
                     buttons: buttons,
                     headerType: 4
@@ -2953,11 +2953,11 @@ break
 		    let buttonMessage = {
 		        image: { url: anu.author.profilePic },
 			caption: `
-? Title : ${anu.title}
-? Author : ${anu.author.name}
-? Like : ${anu.like}
-? Caption : ${anu.caption}
-? Url : ${anu.media[0]}
+♪ Title : ${anu.title}
+♪  Author : ${anu.author.name}
+♪  Like : ${anu.like}
+♪ Caption : ${anu.caption}
+♪  Url : ${anu.media[0]}
 To Download Media, Please Click One Of The Buttons Below Or Enter The ytmp3/ytmp4 Command With The Url Above
 `,
 			footer: Robot_MD.user.name,
@@ -3400,29 +3400,81 @@ reply("Success Changing Menu To "+q)
         image: { url: 'https://i.ibb.co/fq9trJx/logo.jpg'},
    
     caption:`
-I Am ?????.?????????????
+❦❦ _I Am Mr-Robot-MD_ ❦❦ 
 
-?? ??????? ???? ??
+☟☟ ~Main Command List~ ☟☟
 
- *Command:-* .alive
- *Command:-* .menu
- *Command:-* .song
- *Command:-* .video
-? *Command:-* .sticker
-? *Command:-* .tomp3
-? *Command:-* .emojimix 
-? *Command:-* .getmusic 
-? *Command:-* .getvideo 
-? *Command:-* .toimage
-? *Command:-* .ytsearch 
- +--??Gruop Command ??
- *Command:-* .grouplink
- *Command:-* .setgcpp
- *Command:-* .setname
- *Command:-* .add
- *Command:-* .kick
- *Command:-* .promote
- *Command:-* .demote  `,
+ ☞ *Command:-* .alive
+ ☞ *Command:-* .menu
+ ☞ *Command:-* .song
+ ☞ *Command:-* .video
+ ☞ *Command:-* .sticker
+ ☞ *Command:-* .tomp3
+ ☞ *Command:-* .emojimix 
+ ☞ *Command:-* .getmusic 
+ ☞ *Command:-* .getvideo 
+ ☞ *Command:-* .toimage
+ ☞ *Command:-* .ytsearch 
+ ☞ *Command:-* .fb
+ ☞ *Command:-* .tiktok
+ ☞ *Command:-* .logo
+  _*➠ ║Gruop Command║*_
+ ☞ *Command:-* .grouplink
+ ☞ *Command:-* .setgcpp
+ ☞ *Command:-* .setname
+ ☞ *Command:-* .add
+ ☞ *Command:-* .kick
+ ☞ *Command:-* .promote
+ ☞ *Command:-* .demote `,
+	    
+	    footer: 'Robot MD',
+buttons,
+headerType: 4
+}
+Robot_MD.sendMessage(m.chat, buttonMessage, { quoted: m })
+}
+break
+		
+		case  'logo':{
+                           	let buttons = [
+        {buttonId: `${prefix}alive`, buttonText: {displayText: ' Menu '}, type: 1}]
+    let buttonMessage = {
+        image: { url: 'https://i.ibb.co/fq9trJx/logo.jpg'},
+   
+    caption:`
+   ☟☟ Mr-Robot Logo Maker ☟☟
+     _*➠ ║Logo Maker║*_  
+☞ *Command:-* .3dchristmas 
+☞ *Command:-* .3ddeepsea 
+☞ *Command:-* .americanflag 
+☞ *Command:-* .3dscifi 
+☞ *Command:-* .3drainbow 
+☞ *Command:-* .3dwaterpipe 
+☞ *Command:-* .halloweenskeleton 
+☞ *Command:-* .sketch 
+☞ *Command:-* .bluecircuit 
+☞ *Command:-* .space 
+☞ *Command:-* .metallic 
+☞ *Command:-* .fiction 
+☞ *Command:-* .greenhorror 
+☞ *Command:-* .transformer 
+☞ *Command:-* .berry 
+☞ *Command:-* .thunder 
+☞ *Command:-* .magma 
+☞ *Command:-* .3dcrackedstone 
+☞ *Command:-* .3dneonlight 
+☞ *Command:-* .impressiveglitch 
+☞ *Command:-* .naturalleaves 
+☞ *Command:-* .fireworksparkle 
+☞ *Command:-* .matrix 
+☞ *Command:-* .dropwater 
+☞ *Command:-* .harrypotter 
+☞ *Command:-* .foggywindow 
+☞ *Command:-* .neondevils 
+☞ *Command:-* .christmasholiday 
+☞ *Command:-* .3dgradient 
+☞ *Command:-* .blackpink 
+☞ *Command:-* .gluetext`,
 	    
 	    footer: 'Robot MD',
 buttons,
@@ -3441,12 +3493,11 @@ break
     let buttonMessage = {
         image: { url: 'https://i.ibb.co/fq9trJx/logo.jpg'},
     caption:`
-? Hi ?? ?
- ??? ${pushname} ?
- *I Am Alive Now...*???????
+ Hi👋🏻👋🏻  
+  ${pushname} ?
+ *I Am Alive Now...*
  _How Can Help You..._??
- 
- ?????????????? ???? ????.??????????-???? `,
+ `,
                      
                             footer: 'Robot MD',
 buttons,
@@ -3873,6 +3924,195 @@ await Robot_MD.send5ButImg(from, `` + '' + ' ', `
 ?+-------------?
 ???? ${pushname} ???`,unicorn, [{"urlButton": {"displayText": "facebook","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}},{"quickReplyButton": {"displayText": "??Donate??","id": 'donate'}},{"quickReplyButton": {"displayText": "??Owner??","id": 'owner'}}] )
 break
+		
+		case 'fbaudio': {
+   if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+                  if (!text) return reply(`Where is the link?\nExample: ${prefix + command} https://fb.watch/eEudfpC3Wz/`)
+                  if (!q.includes('fb')) return reply(`මෙය Facebook Link එකක් නොවේ. කරුණාකර වලංගු Link එකක් ඇතුලත් කරන්න!`)
+                  if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
+  let noh = require('@bochilteam/scraper')                
+  noh.savefrom(`${text}`).then(async (anu) => {  
+  Robot_MD.sendMessage(m.chat, { audio: { url: anu.url[0].url }, mimetype: 'audio/mp4',fileName: 'Facebook mp3' }, { quoted: m }) 
+    
+                }).catch((err) => {
+                    reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
+                })
+            }
+            break
+
+
+
+
+            case 'fbvideo': {
+                if (isBan) return reply(mess.ban)	 			
+             if (isBanChat) return reply(mess.banChat)
+                               if (!text) return reply(`Where is the link?\nExample: ${prefix + command} https://fb.watch/eEudfpC3Wz/`)
+                               if (!q.includes('f')) return reply(`මෙය Facebook Link එකක් නොවේ. කරුණාකර වලංගු Link එකක් ඇතුලත් කරන්න!`)
+                               if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
+                               
+                             
+                               
+               let noh = require('@bochilteam/scraper')                
+               noh.savefrom(`${text}`).then(async (anu) => {  
+               
+               Robot_MD.sendMessage(m.chat, { video: { url: anu.url[0].url }, mimetype: 'video/mp4', fileName: 'Facebook Video', caption: ' \n 𝐂𝐑𝐄𝐀𝐓𝐄 𝐁𝐘\n \n 𝗤𝗨𝗘𝗘𝗡 𝗔𝗦𝗛𝗜𝗬𝗔  ᴹᴰ'}, { quoted: m })     
+                             }).catch((err) => {
+                                 reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
+                             })
+                         }
+                         break
+
+
+
+                         case 'fbdoc': {
+                            if (isBan) return reply(mess.ban)	 			
+                         if (isBanChat) return reply(mess.banChat)
+                                           if (!text) return reply(`Where is the link?\nExample: ${prefix + command} https://fb.watch/eEudfpC3Wz/`)
+                                           if (!q.includes('f')) return reply(`මෙය Facebook Link එකක් නොවේ. කරුණාකර වලංගු Link එකක් ඇතුලත් කරන්න!`)
+                                           if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
+                                           
+                                         
+                                           
+                           let noh = require('@bochilteam/scraper')                
+                           noh.savefrom(`${text}`).then(async (anu) => {  
+                           
+                           Robot_MD.sendMessage(m.chat, { document: { url: anu.url[0].url }, mimetype: 'audio/mpeg',fileName: 'Facebook Audio Dcument' }, { quoted: m })       
+                                         }).catch((err) => {
+                                             reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
+                                         })
+                                     }
+                                     break
+
+
+             case 'fb': case 'facebook': {
+                if (isBan) return reply(mess.ban)	 			
+             if (isBanChat) return reply(mess.banChat)
+        
+                               if (!text) return reply(`Where is the link?\nExample: ${prefix + command} https://fb.watch/eEudfpC3Wz/`)
+                               if (!q.includes('f')) return reply(`මෙය Facebook Link එකක් නොවේ. කරුණාකර වලංගු Link එකක් ඇතුලත් කරන්න!`)
+                               if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
+                               let noh = require('@bochilteam/scraper')                
+                                      noh.savefrom(`${text}`).then(async (anu) => { 
+                               let buttons = [
+                                {buttonId: `fbvideo ${text}`, buttonText: {displayText: '♬Video♬'}, type: 1},
+                                {buttonId: `fbaudio ${text}`, buttonText: {displayText: '♫Audio♫'}, type: 1},
+                                {buttonId: `fbdoc ${text}`, buttonText: {displayText: '♫Documen♫'}, type: 1}]
+                        
+                            
+                            let buttonMessage = {
+                                image: { url: 'https://i.ibb.co/Q70qfdJ/Facebook-video-download.jpg' },
+                                caption: `
+                                 Mr-Robot-MD
+
+                                    ꜰᴀᴄᴇʙᴏᴏᴋ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ`,
+
+                                footer: 'Robot MD',
+                                buttons: buttons,
+                                headerType: 4
+                            }
+                            Robot_MD.sendMessage(m.chat, buttonMessage, { quoted: m })
+
+                      
+                        }).catch((err) => {
+                            reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
+                        })
+                    }
+                    break
+
+
+
+
+                         case 'tiktok': {     	    
+                            if (isBan) return reply(mess.ban)	 			
+                         if (isBanChat) return reply(mess.banChat)
+                                      if (!text) return reply(`Where is the link?`)
+                                      if (!q.includes('tiktok.com')) return reply(`මෙය Tiktok Link එකක් නොවේ. කරුණාකර වලංගු Link එකක් ඇතුලත් කරන්න!`)
+                                      if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
+                                      let noh = require('@bochilteam/scraper')                
+                                      noh.savefrom(`${text}`).then(async (anu) => { 
+                                         let buttons = [
+                                            {buttonId: `tiktokvideo ${text}`, buttonText: {displayText: '♬Video♬'}, type: 1},
+                                            {buttonId: `tiktokmp3 ${text}`, buttonText: {displayText: '♫Audio♫'}, type: 1},
+                                            {buttonId: `tiktokdoc ${text}`, buttonText: {displayText: '♫Documen♫'}, type: 1}
+                                        ]
+                                        let buttonMessage = {
+                                            image: { url: 'https://i.ibb.co/6JH6m43/tiktok-download.jpg' },
+                                            caption: `
+                                             Mr-Robot-MD
+                                            
+                                               ᴛɪᴋ ᴛᴏᴋ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ`,
+
+                                            footer: 'Robot MD',
+                                            buttons: buttons,
+                                            headerType: 4
+                                        }
+                                        Robot_MD.sendMessage(m.chat, buttonMessage, { quoted: m })
+                                    }).catch((err) => {
+                                        reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
+                                    })
+                                }
+                                break
+
+
+
+
+                         case 'tiktokmp3': {
+                            if (isBan) return reply(mess.ban)	 			
+                         if (isBanChat) return reply(mess.banChat)
+
+                                        
+                                           if (!text) return reply(`Where is the link?\nExample: ${prefix + command} https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
+                                           if (!q.includes('tiktok')) return reply(`මෙය Tiktok Link එකක් නොවේ. කරුණාකර වලංගු Link එකක් ඇතුලත් කරන්න!`)
+                                           if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
+                                           
+                           let noh = require('@bochilteam/scraper')                
+                           noh.savefrom(`${text}`).then(async (anu) => {  
+                           
+                            Robot_MD.sendMessage(m.chat, { audio: { url: anu.url[0].url }, mimetype: 'audio/mp4',fileName: 'Tik Tok mp3' }, { quoted: m })      
+                                         }).catch((err) => {
+                                             reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
+                                         })
+                                     }
+                                     break
+
+
+                                     case 'tiktokdoc': {
+                                        if (isBan) return reply(mess.ban)	 			
+                                     if (isBanChat) return reply(mess.banChat)
+            
+                                                    
+                                                       if (!text) return reply(`Where is the link?\nExample: ${prefix + command} https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
+                                                       if (!q.includes('tiktok')) return reply(`මෙය Tiktok Link එකක් නොවේ. කරුණාකර වලංගු Link එකක් ඇතුලත් කරන්න!`)
+                                                       if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
+                                       let noh = require('@bochilteam/scraper')                
+                                       noh.savefrom(`${text}`).then(async (anu) => {  
+                                       
+                                        Robot_MD.sendMessage(m.chat, { document: { url: anu.url[0].url }, mimetype: 'audio/mpeg',fileName: 'Tik Tok Audio Dcument' }, { quoted: m })     
+                                                     }).catch((err) => {
+                                                         reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
+                                                     })
+                                                 }
+                                                 break
+                         
+
+
+
+                                     case 'tiktokvideo': {
+                                        if (isBan) return reply(mess.ban)	 			
+                                     if (isBanChat) return reply(mess.banChat)
+                                                       if (!text) return reply(`Where is the link?\nExample: ${prefix + command} https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
+                                                       if (!q.includes('tiktok')) return reply(`මෙය Tiktok Link එකක් නොවේ. කරුණාකර වලංගු Link එකක් ඇතුලත් කරන්න!`)
+                                                       if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
+                                       let noh = require('@bochilteam/scraper')                
+                                       noh.savefrom(`${text}`).then(async (anu) => {  
+                                       
+                                       Robot_MD.sendMessage(m.chat, { video: { url: anu.url[0].url }, mimetype: 'video/mp4', fileName: 'Tik Tok Video', caption: ' \n Create By\n \n Mr-Robot-MD'}, { quoted: m })     
+                                                     }).catch((err) => {
+                                                         reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
+                                                     })
+                                                 }
+		                                 break
 
 
             default:
