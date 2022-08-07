@@ -3488,7 +3488,7 @@ break
 
             case 'robot': case 'alive': {
 		          let buttons = [
-        {buttonId: `${prefix}menu`, buttonText: {displayText: 'list menu '}, type: 1}]
+        {buttonId: `${prefix}command`, buttonText: {displayText: 'list menu '}, type: 1}]
        
     let buttonMessage = {
         image: { url: 'https://i.ibb.co/fq9trJx/logo.jpg'},
@@ -3506,7 +3506,7 @@ headerType: 4
 Robot_MD.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
 break
-                case 'menu': {
+                case 'command': {
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `Hi ${pushname}`,
