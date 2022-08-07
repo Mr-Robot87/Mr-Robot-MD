@@ -3437,7 +3437,7 @@ break
 		
 		case  'logo':{
                            	let buttons = [
-        {buttonId: `${prefix}alive`, buttonText: {displayText: ' Menu '}, type: 1}]
+        {buttonId: `${prefix}alive`, buttonText: {displayText: ' command '}, type: 1}]
     let buttonMessage = {
         image: { url: 'https://i.ibb.co/fq9trJx/logo.jpg'},
    
@@ -3488,13 +3488,16 @@ break
 
             case 'robot': case 'alive': {
 		          let buttons = [
-        {buttonId: `${prefix}menu`, buttonText: {displayText: 'MENU '}, type: 1}]
+        {buttonId: `${prefix}menu`, buttonText: {displayText: 'command '}, type: 1}]
        
     let buttonMessage = {
         image: { url: 'https://i.ibb.co/fq9trJx/logo.jpg'},
     caption:`
  Hi👋🏻👋🏻  
   ${pushname} ?
+│✙ 𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
+│✙ 𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
+│✙ 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${global.botname}
  *I Am Alive Now...*
  _How Can Help You..._??
  `,
@@ -3506,7 +3509,7 @@ headerType: 4
 Robot_MD.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
 break
-                case 'menu': {
+                case 'command': {
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `Hi ${pushname}`,
