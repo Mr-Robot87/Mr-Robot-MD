@@ -3393,7 +3393,7 @@ reply("Success Changing Menu To "+q)
 	
 		
                  
-                     case 'menu': case 'list':{
+                      case 'list':{
                            	let buttons = [
         {buttonId: `${prefix}alive`, buttonText: {displayText: ' ALIVE '}, type: 1}]
     let buttonMessage = {
@@ -3437,7 +3437,7 @@ break
 		
 		case  'logo':{
                            	let buttons = [
-        {buttonId: `${prefix}alive`, buttonText: {displayText: ' command '}, type: 1}]
+        {buttonId: `${prefix}alive`, buttonText: {displayText: ' Menu '}, type: 1}]
     let buttonMessage = {
         image: { url: 'https://i.ibb.co/fq9trJx/logo.jpg'},
    
@@ -3488,7 +3488,7 @@ break
 
             case 'robot': case 'alive': {
 		          let buttons = [
-        {buttonId: `${prefix}menu`, buttonText: {displayText: 'command '}, type: 1}]
+        {buttonId: `${prefix}menu`, buttonText: {displayText: 'Menu '}, type: 1}]
        
     let buttonMessage = {
         image: { url: 'https://i.ibb.co/fq9trJx/logo.jpg'},
@@ -3509,7 +3509,7 @@ headerType: 4
 Robot_MD.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
 break
-                case 'command': {
+                case 'Menu': {
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `Hi ${pushname}`,
