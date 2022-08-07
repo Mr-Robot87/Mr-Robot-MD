@@ -3393,9 +3393,9 @@ reply("Success Changing Menu To "+q)
 	
 		
                  
-                      case 'list':{
+	case 'list': case 'menu':{
                            	let buttons = [
-        {buttonId: `${prefix}alive`, buttonText: {displayText: ' ALIVE '}, type: 1}]
+        {buttonId: `${prefix}command`, buttonText: {displayText: ' All Menu '}, type: 1}]
     let buttonMessage = {
         image: { url: 'https://i.ibb.co/fq9trJx/logo.jpg'},
    
