@@ -3495,9 +3495,6 @@ break
     caption:`
  Hi👋🏻👋🏻  
   ${pushname} ?
-│✙ 𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
-│✙ 𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-│✙ 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${global.botname}
  *I Am Alive Now...*
  _How Can Help You..._??
  `,
