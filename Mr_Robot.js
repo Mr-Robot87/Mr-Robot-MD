@@ -3515,10 +3515,10 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                     footerText: `${global.footer}`,
                     listType: "SINGLE_SELECT",
                     sections: [{
-								"title": "???????Main Features???????",
+								"title": " _Main Features_ ",
 								"rows": [
 									{
-										"title": "???Main Menu???",
+										"title": "Main Menu📁",
 										"description": "Displays The List Of Main Features",
 										"rowId": `${prefix}mainmenu`
 									}
@@ -3528,45 +3528,45 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"title": "Bot Features",
 								"rows": [
 									{
-										"title": "??All Menu??",
+										"title": "All Menu📌",
 										"description": "Displays The List Of All The Features!",
 										"rowId": `${prefix}allmenu`
 									},
 									{
-										"title": "??Owner Menu??",
+										"title": "Owner Menu👤",
 										"description": "Displays The List Of Owner Features",
 										"rowId": `${prefix}ownermenu`
 										},
 									{
-										"title": "??Group Menu??",
+										"title": "Group Menu❄️",
 										"description": "Displays The List Of Main Features",
 										"rowId": `${prefix}groupmenu`
 										},
 									
 									{
-										"title": "??Download Menu??",
+										"title": "Download Menu📥",
 										"description": "Displays The List Of Download Features",
 										"rowId": `${prefix}downloadmenu`
 									},
 									{
-										"title": "???????Search Menu???????",
+										"title": "Search Menu🔎",
 										"description": "Displays The List Of Searching Features",
 										"rowId": `${prefix}searchmenu`
 																	
 										},
 										{
-											"title": "??Convert Menu??",
+											"title": "Convert Menu🔄",
 										"description": "Displays The List Of Convert Features",
 										"rowId": `${prefix}convertmenu`
 										},
 										{
-											"title": "??Database Menu??",
+											"title": "Database Menu🔒",
 										"description": "Displays The List Of Database Features",
 										"rowId": `${prefix}databasemenu`
 										
 										},
 										{
-											"title": "??TXT-to-IMG Menu??",
+											"title": "TXT-to-IMG Menu🖼️",
 										"description": "Displays The List Of Textpro Features",
 										"rowId": `${prefix}textpromenu`
 										 
@@ -3595,88 +3595,86 @@ case 'allmenu': {
   	anu = `
 ??? *${botname}* ???? 
 ?+--??? MAIN ???
-?¦ ${prefix}???????alive
-?¦ ${prefix}???????script
-?¦ ${prefix}???????speedtest
-?¦ ${prefix}???????ping
-?¦ ${prefix}???????owner
-?¦ ${prefix}???????menu
-?¦ ${prefix}???????delete
-?¦ ${prefix}???????chatinfo
-?¦ ${prefix}???????quoted
-?¦ ${prefix}???????listpc
-?¦ ${prefix}???????listgc
-?¦ ${prefix}???????donate
-?¦ ${prefix}???????report [bug]
+☞ *Command:-* alive
+☞ *Command:-* script
+☞ *Command:-* speedtest
+☞ *Command:-* ping
+☞ *Command:-* owner
+☞ *Command:-* menu
+☞ *Command:-* delete
+☞ *Command:-* chatinfo
+☞ *Command:-* quoted
+☞ *Command:-* listpc
+☞ *Command:-* listgc
+☞ *Command:-* donate
+☞ *Command:-* report [bug]
 ?¦--?? OWNER ? ??
-?¦ ${prefix}??chat [option]
-?¦ ${prefix}??join [link]
-?¦ ${prefix}??leave
-?¦ ${prefix}??block [user]
-?¦ ${prefix}??unblock [user]
-?¦ ${prefix}??bcgroup [text]
-?¦ ${prefix}??bcall [text]
-?¦ ${prefix}??setppbot [image]
-?¦ ${prefix}??setexif
+☞ *Command:-* chat [option]
+☞ *Command:-* join [link]
+☞ *Command:-* leave
+☞ *Command:-* block [user]
+☞ *Command:-* unblock [user]
+☞ *Command:-* bcgroup [text]
+☞ *Command:-* bcall [text]
+☞ *Command:-* setppbot [image]
+☞ *Command:-* setexif
 ?¦--?? GROUP ? ??      
-?¦${prefix}grouplink
-?¦${prefix}ephemeral [option]
-?¦${prefix}setgcpp [image]
-?¦${prefix}setname [text]
-?¦${prefix}setdesc [text]
-?¦${prefix}group [text]
-?¦${prefix}editinfo [option]
-?¦${prefix}add [user]
-?¦${prefix}kick [reply/tag]
-?¦${prefix}hidetag [text]
-?¦${prefix}tagall [text]
-?¦${prefix}antilink [on/off]
-?¦${prefix}mute [on/off]
-?¦${prefix}promote [reply/tag]
-?¦${prefix}demote [reply/tag]
+☞ *Command:-* }grouplink
+☞ *Command:-* ephemeral [option]
+☞ *Command:-* setgcpp [image]
+☞ *Command:-* setname [text]
+☞ *Command:-* setdesc [text]
+☞ *Command:-* group [text]
+☞ *Command:-* editinfo [option]
+☞ *Command:-* add [user]
+☞ *Command:-* kick [reply/tag]
+☞ *Command:-* hidetag [text]
+☞ *Command:-* tagall [text]
+☞ *Command:-* antilink [on/off]
+☞ *Command:-* mute [on/off]
+☞ *Command:-* promote [reply/tag]
+☞ *Command:-* demote [reply/tag]
 ?¦-?? DOWNLOADER ???
-?¦${prefix}ytmp3 [url|quality]
-?¦${prefix}ytmp4 [url|quality]
-?¦${prefix}getmusic [yt link]
-?¦${prefix}getvideo [yt link]
-?¦${prefix}umma [query]
-?¦${prefix}joox [query]
-?¦${prefix}soundcloud [url]
+☞ *Command:-* ytmp3 [url|quality]
+☞ *Command:-* ytmp4 [url|quality]
+☞ *Command:-* getmusic [yt link]
+☞ *Command:-* getvideo [yt link]
+☞ *Command:-* soundcloud [url]
 ?¦--?? SEARCHER ? ??
-?¦${prefix}play [query]
-?¦${prefix}song [query]
-?¦${prefix}yts [query]
-?¦${prefix}google [query]
-?¦${prefix}gimage [query]
-?¦${prefix}pinterest [query]
-?¦${prefix}wallpaper [query]
-?¦${prefix}wikimedia [query]
-?¦${prefix}ytsearch [query]
-?¦${prefix}ringtone [query]
-?¦${prefix}webtoon [query]
+☞ *Command:-* play [query]
+☞ *Command:-* song [query]
+☞ *Command:-* yts [query]
+☞ *Command:-* google [query]
+☞ *Command:-* gimage [query]
+☞ *Command:-* pinterest [query]
+☞ *Command:-* wallpaper [query]
+☞ *Command:-* wikimedia [query]
+☞ *Command:-* ytsearch [query]
+☞ *Command:-* ringtone [query]
+☞ *Command:-* webtoon [query]
 ?
 ?¦---?? CONVERTER ? ??
-?¦ ${prefix}toimage [reply stick]
-?¦ ${prefix}sticker [reply img|gif]
-?¦ ${prefix}emojimix [moji+moji]
-?¦ ${prefix}tovideo [reply img]
-?¦ ${prefix}togif [reply stick]
-?¦ ${prefix}tourl [reply img]
-?¦ ${prefix}tovn [reply aud]
-?¦ ${prefix}tomp3 [reply vn]
-?¦ ${prefix}toaudio [reply vid]
-?¦ ${prefix}ebinary [reply txt]
-?¦ ${prefix}dbinary [reply txt]
-?¦ ${prefix}styletext [text]
+☞ *Command:-* toimage [reply stick]
+☞ *Command:-* sticker [reply img|gif]
+☞ *Command:-* emojimix [moji+moji]
+☞ *Command:-* tovideo [reply img]
+☞ *Command:-* togif [reply stick]
+☞ *Command:-* tourl [reply img]
+☞ *Command:-* tovn [reply aud]
+☞ *Command:-* tomp3 [reply vn]
+☞ *Command:-* toaudio [reply vid]
+☞ *Command:-* ebinary [reply txt]
+☞ *Command:-* dbinary [reply txt]
+☞ *Command:-* styletext [text]
 ?¦--?? DATABASE ? ??
-?¦ ${prefix}setcmd
-?¦ ${prefix}listcmd
-?¦ ${prefix}delcmd
-?¦ ${prefix}lockcmd
-?¦ ${prefix}addmsg
-?¦ ${prefix}listmsg
-?¦ ${prefix}getmsg
-?¦ ${prefix}delmsg
+☞ *Command:-* setcmd
+☞ *Command:-* listcmd
+☞ *Command:-* delcmd
+☞ *Command:-* lockcmd
+☞ *Command:-* addmsg
+☞ *Command:-* listmsg
+☞ *Command:-* getmsg
+☞ *Command:-* delmsg
 ??? *Created By ${ownername}*  ?????`
     const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
