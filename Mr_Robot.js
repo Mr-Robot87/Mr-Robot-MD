@@ -250,9 +250,9 @@ const reply = (teks) => {
         let gclink = (`https://chat.whatsapp.com/`+await Robot_MD.groupInviteCode(m.chat))
         let isLinkThisGc = new RegExp(gclink, 'i')
         let isgclink = isLinkThisGc.test(m.text)
-        if (isgclink) return reply(`Group Is Installed With Anti-Link But I Won't Kick You ??, Because You Sent This Group Link??`)
-        if (isAdmins) return reply(`Group Is Installed With Anti-Link But I Won't Kick You ??, Because You Are An Admin Of The Group??`)
-        if (isCreator) return reply(`Group Is Installed With Anti-Link But I Won't Kick You ??, Because You Are My Owner Hahahahah????, You Think I Will Betray You Huh??`)
+        if (isgclink) return reply(`Group Is Installed With Anti-Link But I Won't Kick You 🪄, Because You Sent This Group Link🫂`)
+        if (isAdmins) return reply(`Group Is Installed With Anti-Link But I Won't Kick You 🪄, Because You Are An Admin Of The Group🫂`)
+        if (isCreator) return reply(`Group Is Installed With Anti-Link But I Won't Kick You 🪄, Because You Are My Owner Hahahahah😂😂, You Think I Will Betray You Huh🫂`)
         Robot_MD.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         }
         }
@@ -588,7 +588,7 @@ if (q.includes('--help')) return reply(examkosong)
      teksehmazeh += `*??Cow* : ${getSapi(m.sender)}\n`
      teksehmazeh += `*??Elephant* : ${getGajah(m.sender)}\n\n`
      teksehmazeh += `_*${pushname}*_`
-     await Robot_MD.send5ButImg(from, `` + '' + teksehmazeh, `© ${footer}`, Robot_MD, [{"urlButton": {"displayText": "YouTube??","url": `${myweb}`}}])
+     await Robot_MD.send5ButImg(from, `` + '' + teksehmazeh, `© ${footer}`, Robot_MD, [{"urlButton": {"displayText": "YouTube","url": `${myweb}`}}])
   }
   break
         case 'userlimit': 
@@ -1186,7 +1186,7 @@ Robot_MD.sendMessage(from, { text: `Question : Can ${q}\nAnswer : ${ga}` }, { qu
 					break
 case 'how':
 				if (!text) return replay(`Use Text, Example : ${prefix + command} is my face`)
-					const gimana = [`It's Okay`, `It's Difficult Bro`, `Sorry Bot Can't Answer`, `Try Searching On Google`,`Holy Cow! Really???`,`Dizzy Ah`,`Ohhh I See:(`,`The Patient, Boss:(`,`How Are You?`]
+					const gimana = [`It's Okay`, `It's Difficult Bro`, `Sorry Bot Can't Answer`, `Try Searching On Google`,`Holy Cow! Really??`,`Dizzy Ah`,`Ohhh I See:(`,`The Patient, Boss:(`,`How Are You?`]
 					const ya = gimana[Math.floor(Math.random() * gimana.length)]
 Robot_MD.sendMessage(from, { text: `Question : ${q}\nAnswer : How ${ya}` }, { quoted: m })
 
@@ -1354,7 +1354,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
                if (!text) return replay(`Example : ${prefix + command} packname|author`)
           global.packname = text.split("|")[0]
           global.author = text.split("|")[1]
-          reply(`Exif Has Been Successfully Changed to\n\n?? Packname : ${global.packname}\n?? Author : ${global.author}`)
+          reply(`Exif Has Been Successfully Changed to\n\n?? Packname : ${global.packname}\n📌📌 Author : ${global.author}`)
             }
             break
 	case 'kick': {
@@ -1739,12 +1739,12 @@ break
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '??Menu??',
+                                    displayText: 'Owner',
                                     id: 'menu'
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '??Owner??',
+                                    displayText: 'Owner',
                                     id: 'owner'
                                 }
                             }]
@@ -1768,17 +1768,17 @@ break
                                 }
                             }, {
                                 urlButton: {
-                                    displayText: 'YouTube??',
+                                    displayText: 'YouTube',
                                     url: `${myweb}`
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '??Menu??',
+                                    displayText: 'Owner',
                                     id: 'menu'
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '??Owner??',
+                                    displayText: 'Owner',
                                     id: 'owner'
                                 }
                             }]
@@ -2032,7 +2032,7 @@ break
         n = result
         images = n[Math.floor(Math.random() * n.length)].url
         let buttons = [
-                    {buttonId: `gimage ${text}`, buttonText: {displayText: '????Next Image????'}, type: 1}
+                    {buttonId: `gimage ${text}`, buttonText: {displayText: '➠➠Next Image➠➠'}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: images },
@@ -2154,7 +2154,7 @@ break
                 let quality = args[1] ? args[1] : '720p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `?? Title : ${media.title}\n?? File Size : ${media.filesizeF}\n?? Url : ${isUrl(text)}\n?? Ext : MP4\n?? Resolution : ${args[1] || '720p'}` }, { quoted: m })
+                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🎶 Title : ${media.title}\n⭕ File Size : ${media.filesizeF}\n?? Url : ${isUrl(text)}\n?? Ext : MP4\n?? Resolution : ${args[1] || '720p'}` }, { quoted: m })
             }
             break
 		
