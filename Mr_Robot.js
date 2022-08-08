@@ -3431,7 +3431,7 @@ break
 		
 		case  'logo':{
                            	let buttons = [
-        {buttonId: `${prefix}alive`, buttonText: {displayText: ' Menu '}, type: 1}]
+        {buttonId: `${prefix}menu`, buttonText: {displayText: ' Menu '}, type: 1}]
     let buttonMessage = {
         image: { url: 'https://i.ibb.co/fq9trJx/logo.jpg'},
    
@@ -3504,7 +3504,7 @@ break
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `Hi ${pushname}`,
-                    description: `Please Choose The Menu\n\n`,
+                    description: `🔊 Please Choose The Menu🫵🏻🔊 \n\n`,
                     buttonText: "Menu",
                     footerText: `${global.footer}`,
                     listType: "SINGLE_SELECT",
