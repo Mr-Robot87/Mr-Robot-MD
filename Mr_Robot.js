@@ -2096,16 +2096,16 @@ break
                 let buttonMessage = {
                     image: { url: anu.thumbnail },
                     caption: `
-♪♪ Title : ${anu.title}
-♪♪ Ext : Search
-♪♪ ID : ${anu.videoId}
-♪♪ Duration : ${anu.timestamp}
-♪♪ Viewes : ${anu.views}
-♪♪ Uploaded On : ${anu.ago}
-♪♪ Author : ${anu.author.name}
-♪♪ Channel : ${anu.author.url}
-♪♪ Description : ${anu.description}
-♪♪ Url : ${anu.url}`,
+🎶 𝒯𝒾𝓉𝓁ℯ : ${anu.title}
+🎶 ℰ𝓍𝓉 : Search
+🎶 ℐ𝒟 : ${anu.videoId}
+🎶 𝒟𝓊𝓇𝒶𝓉𝒾ℴ𝓃 : ${anu.timestamp}
+👀 𝒱𝒾ℯ𝓌ℯ𝓈 : ${anu.views}
+🪄 𝒰𝓅𝓁ℴ𝒶𝒹ℯ𝒹 𝒪𝓃 : ${anu.ago}
+💫 𝒜𝓊𝓉𝒽ℴ𝓇 : ${anu.author.name}
+⚡ 𝒞𝒽𝒶𝓃𝓃ℯ𝓁 : ${anu.author.url}
+📝 𝒟ℯ𝓈𝒸𝓇𝒾𝓅𝓉𝒾ℴ𝓃 : ${anu.description}
+📝 𝒰𝓇𝓁 : ${anu.url}`,
                     footer: Robot_MD.user.name,
                     buttons: buttons,
                     headerType: 4
@@ -2117,22 +2117,22 @@ break
 		
 	    case 'ytmp3': case 'getmusic': case 'ytaudio': {
                 let { yta } = require('./lib/y2mate')
-                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
-                let quality = args[1] ? args[1] : '128kbps'
+                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 256kbps`)
+                let quality = args[1] ? args[1] : '256kbps'
                 let media = await yta(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                Robot_MD.sendImage(m.chat, media.thumb, `?? Title : ${media.title}\n?? File Size : ${media.filesizeF}\n?? Url : ${isUrl(text)}\n?? Ext : MP3\n?? Resolution : ${args[1] || '128kbps'}`, m)
+                Robot_MD.sendImage(m.chat, media.thumb, `🎶 𝒯𝒾𝓉𝓁ℯ : ${media.title}\n📌 ℱ𝒾𝓁ℯ 𝒮𝒾𝓏ℯ : ${media.filesizeF}\n📝 𝒰𝓇𝓁 : ${isUrl(text)}\n🎶 ℰ𝓍𝓉  : MP3\n📢 ℛℯ𝓈ℴ𝓁𝓊𝓉𝒾ℴ𝓃 : ${args[1] || '256kbps'}`, m)
                 Robot_MD.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
 		
 	    case 'document': {
 		 let { yta } = require('./lib/y2mate')
-                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
-                let quality = args[1] ? args[1] : '128kbps'
+                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 256kbps`)
+                let quality = args[1] ? args[1] : '256kbps'
                 let media = await yta(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                Robot_MD.sendImage(m.chat, media.thumb, `?? Title : ${media.title}\n?? File Size : ${media.filesizeF}\n?? Url : ${isUrl(text)}\n?? Ext : MP3\n?? Resolution : ${args[1] || '128kbps'}`, m)
+                Robot_MD.sendImage(m.chat, media.thumb, `🎶 𝒯𝒾𝓉𝓁ℯ : ${media.title}\n📌 ℱ𝒾𝓁ℯ 𝒮𝒾𝓏ℯ : ${media.filesizeF}\n📝 𝒰𝓇𝓁 : ${isUrl(text)}\n🎶 ℰ𝓍𝓉  : MP3\n📢 ℛℯ𝓈ℴ𝓁𝓊𝓉𝒾ℴ𝓃 : ${args[1] || '256kbps'}`, m)
                 Robot_MD.sendMessage(m.chat, { document: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
 	    }
 	    break
@@ -2142,7 +2142,7 @@ break
                 let quality = args[1] ? args[1] : '480p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `?? Title : ${media.title}\n?? File Size : ${media.filesizeF}\n?? Url : ${isUrl(text)}\n?? Ext : Mp4\n?? Resolution : ${args[1] || '480p'}` }, { quoted: m })
+                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🎶 𝒯𝒾𝓉𝓁ℯ : ${media.title}\n📌 ℱ𝒾𝓁ℯ 𝒮𝒾𝓏ℯ: ${media.filesizeF}\n📝 𝒰𝓇𝓁 : ${isUrl(text)}\n🎶 ℰ𝓍𝓉  : Mp4\n📢 ℛℯ𝓈ℴ𝓁𝓊𝓉𝒾ℴ𝓃 : ${args[1] || '480p'}` }, { quoted: m })
             }
             break
 		
@@ -2154,7 +2154,7 @@ break
                 let quality = args[1] ? args[1] : '720p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🎶 Title : ${media.title}\n⭕ File Size : ${media.filesizeF}\n?? Url : ${isUrl(text)}\n?? Ext : MP4\n?? Resolution : ${args[1] || '720p'}` }, { quoted: m })
+                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🎶 𝒯𝒾𝓉𝓁ℯ : ${media.title}\n📌 ℱ𝒾𝓁ℯ 𝒮𝒾𝓏ℯ: ${media.filesizeF}\n📝 𝒰𝓇𝓁 : ${isUrl(text)}\n🎶 ℰ𝓍𝓉  : MP4\n📢 ℛℯ𝓈ℴ𝓁𝓊𝓉𝒾ℴ𝓃 : ${args[1] || '480p'}` }, { quoted: m })
             }
             break
 		
@@ -2162,10 +2162,10 @@ break
 	    case 'getmusicxxx': {
                 let { yta } = require('./lib/y2mate')
 		let urls = quoted.text.match(new RegExp(/(?:https?:\/\/)?(?:youtu\.be\/|(?:www\.|m\.)?youtube\.com\/(?:watch|v|embed|shorts)(?:\.php)?(?:\?.*v=|\/))([a-zA-Z0-9\_-]+)/, 'gi'))
-                let quality = args[1] ? args[1] : '128kbps'
+                let quality = args[1] ? args[1] : '256kbps'
                 let media = await yta(urls[text - 1], quality)
                 if (media.filesize >= 100000) return reply('File Over Limit '+util.format(media))
-                Robot_MD.sendImage(m.chat, media.thumb, `?? Title : ${media.title}\n?? File Size : ${media.filesizeF}\n?? Url : ${urls[text - 1]}\n?? Ext : MP3\n?? Resolution : ${args[1] || '128kbps'}`, m)
+                Robot_MD.sendImage(m.chat, media.thumb, `🎶 𝒯𝒾𝓉𝓁ℯ : ${media.title}\n📌 ℱ𝒾𝓁ℯ 𝒮𝒾𝓏ℯ : ${media.filesizeF}\n📝 𝒰𝓇𝓁 : ${urls[text - 1]}\n🎶 ℰ𝓍𝓉 : MP3\n📢 ℛℯ𝓈ℴ𝓁𝓊𝓉𝒾ℴ𝓃 : ${args[1] || '256kbps'}`, m)
                 Robot_MD.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
@@ -2179,7 +2179,7 @@ break
                 let quality = args[1] ? args[1] : '480p'
                 let media = await ytv(urls[text - 1], quality)
                 if (media.filesize >= 100000) return reply('File Over Limit '+util.format(media))
-                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `?? Title : ${media.title}\n?? File Size : ${media.filesizeF}\n?? Url : ${urls[text - 1]}\n?? Ext : MP3\n?? Resolution : ${args[1] || '480p'}` }, { quoted: m })
+                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🎶 𝒯𝒾𝓉𝓁ℯ : ${media.title}\n📌 ℱ𝒾𝓁ℯ 𝒮𝒾𝓏ℯ : ${media.filesizeF}\n📝 𝒰𝓇𝓁 : ${urls[text - 1]}\n🎶 ℰ𝓍𝓉  : MP3\n📢 ℛℯ𝓈ℴ𝓁𝓊𝓉𝒾ℴ𝓃 : ${args[1] || '480p'}` }, { quoted: m })
             }
             break
             case 'pinterest': {
@@ -3404,28 +3404,28 @@ reply("Success Changing Menu To "+q)
 
 ☟☟ ~Main Command List~ ☟☟
 
- ☞ *Command:-* .alive
- ☞ *Command:-* .menu
- ☞ *Command:-* .song
- ☞ *Command:-* .video
- ☞ *Command:-* .sticker
- ☞ *Command:-* .tomp3
- ☞ *Command:-* .emojimix 
- ☞ *Command:-* .getmusic 
- ☞ *Command:-* .getvideo 
- ☞ *Command:-* .toimage
- ☞ *Command:-* .ytsearch 
- ☞ *Command:-* .fb
- ☞ *Command:-* .tiktok
- ☞ *Command:-* .logo
+ ☞ Command:- .alive
+ ☞ Command:- .menu
+ ☞ Command:- .song
+ ☞ Command:- .video
+ ☞ Command:- .sticker
+ ☞ Command:- .tomp3
+ ☞ Command:- .emojimix 
+ ☞ Command:- .getmusic 
+ ☞ Command:- .getvideo 
+ ☞ Command:- .toimage
+ ☞ Command:- .ytsearch 
+ ☞ Command:- .fb
+ ☞ Command:- .tiktok
+ ☞ Command:- .logo
   _*➠ ║Gruop Command║*_
- ☞ *Command:-* .grouplink
- ☞ *Command:-* .setgcpp
- ☞ *Command:-* .setname
- ☞ *Command:-* .add
- ☞ *Command:-* .kick
- ☞ *Command:-* .promote
- ☞ *Command:-* .demote `,
+ ☞ Command:- .grouplink
+ ☞ Command:- .setgcpp
+ ☞ Command:- .setname
+ ☞ Command:- .add
+ ☞ Command:- .kick
+ ☞ Command:- .promote
+ ☞ Command:- .demote `,
 	    
 	    footer: 'Robot MD',
 buttons,
@@ -3444,37 +3444,37 @@ break
     caption:`
    ☟☟ Mr-Robot Logo Maker ☟☟
      _*➠ ║Logo Maker║*_  
-☞ *Command:-* .3dchristmas 
-☞ *Command:-* .3ddeepsea 
-☞ *Command:-* .americanflag 
-☞ *Command:-* .3dscifi 
-☞ *Command:-* .3drainbow 
-☞ *Command:-* .3dwaterpipe 
-☞ *Command:-* .halloweenskeleton 
-☞ *Command:-* .sketch 
-☞ *Command:-* .bluecircuit 
-☞ *Command:-* .space 
-☞ *Command:-* .metallic 
-☞ *Command:-* .fiction 
-☞ *Command:-* .greenhorror 
-☞ *Command:-* .transformer 
-☞ *Command:-* .berry 
-☞ *Command:-* .thunder 
-☞ *Command:-* .magma 
-☞ *Command:-* .3dcrackedstone 
-☞ *Command:-* .3dneonlight 
-☞ *Command:-* .impressiveglitch 
-☞ *Command:-* .naturalleaves 
-☞ *Command:-* .fireworksparkle 
-☞ *Command:-* .matrix 
-☞ *Command:-* .dropwater 
-☞ *Command:-* .harrypotter 
-☞ *Command:-* .foggywindow 
-☞ *Command:-* .neondevils 
-☞ *Command:-* .christmasholiday 
-☞ *Command:-* .3dgradient 
-☞ *Command:-* .blackpink 
-☞ *Command:-* .gluetext`,
+☞Command: .3dchristmas 
+☞Command: .3ddeepsea 
+☞Command: .americanflag 
+☞Command: .3dscifi 
+☞Command: .3drainbow 
+☞Command: .3dwaterpipe 
+☞Command: .halloweenskeleton 
+☞Command: .sketch 
+☞Command: .bluecircuit 
+☞Command: .space 
+☞Command: .metallic 
+☞Command: .fiction 
+☞Command: .greenhorror 
+☞Command: .transformer 
+☞Command: .berry 
+☞Command: .thunder 
+☞Command: .magma 
+☞Command: .3dcrackedstone 
+☞Command: .3dneonlight 
+☞Command: .impressiveglitch 
+☞Command: .naturalleaves 
+☞Command: .fireworksparkle 
+☞Command: .matrix 
+☞Command: .dropwater 
+☞Command: .harrypotter 
+☞Command: .foggywindow 
+☞Command: .neondevils 
+☞Command: .christmasholiday 
+☞Command: .3dgradient 
+☞Command: .blackpink 
+☞Command: .gluetext`,
 	    
 	    footer: 'Robot MD',
 buttons,
@@ -3566,9 +3566,9 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										
 										},
 										{
-											"title": "TXT-to-IMG Menu🖼️",
+											"title": "Logo Maker🖼️",
 										"description": "Displays The List Of Textpro Features",
-										"rowId": `${prefix}textpromenu`
+										"rowId": `${prefix}logo`
 										 
 									
 								
@@ -3593,89 +3593,88 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
             break
 case 'allmenu': {
   	anu = `
-??? *${botname}* ???? 
-?+--??? MAIN ???
-☞ *Command:-* alive
-☞ *Command:-* script
-☞ *Command:-* speedtest
-☞ *Command:-* ping
-☞ *Command:-* owner
-☞ *Command:-* menu
-☞ *Command:-* delete
-☞ *Command:-* chatinfo
-☞ *Command:-* quoted
-☞ *Command:-* listpc
-☞ *Command:-* listgc
-☞ *Command:-* donate
-☞ *Command:-* report [bug]
-?¦--?? OWNER ? ??
-☞ *Command:-* chat [option]
-☞ *Command:-* join [link]
-☞ *Command:-* leave
-☞ *Command:-* block [user]
-☞ *Command:-* unblock [user]
-☞ *Command:-* bcgroup [text]
-☞ *Command:-* bcall [text]
-☞ *Command:-* setppbot [image]
-☞ *Command:-* setexif
-?¦--?? GROUP ? ??      
-☞ *Command:-* }grouplink
-☞ *Command:-* ephemeral [option]
-☞ *Command:-* setgcpp [image]
-☞ *Command:-* setname [text]
-☞ *Command:-* setdesc [text]
-☞ *Command:-* group [text]
-☞ *Command:-* editinfo [option]
-☞ *Command:-* add [user]
-☞ *Command:-* kick [reply/tag]
-☞ *Command:-* hidetag [text]
-☞ *Command:-* tagall [text]
-☞ *Command:-* antilink [on/off]
-☞ *Command:-* mute [on/off]
-☞ *Command:-* promote [reply/tag]
-☞ *Command:-* demote [reply/tag]
-?¦-?? DOWNLOADER ???
-☞ *Command:-* ytmp3 [url|quality]
-☞ *Command:-* ytmp4 [url|quality]
-☞ *Command:-* getmusic [yt link]
-☞ *Command:-* getvideo [yt link]
-☞ *Command:-* soundcloud [url]
-?¦--?? SEARCHER ? ??
-☞ *Command:-* play [query]
-☞ *Command:-* song [query]
-☞ *Command:-* yts [query]
-☞ *Command:-* google [query]
-☞ *Command:-* gimage [query]
-☞ *Command:-* pinterest [query]
-☞ *Command:-* wallpaper [query]
-☞ *Command:-* wikimedia [query]
-☞ *Command:-* ytsearch [query]
-☞ *Command:-* ringtone [query]
-☞ *Command:-* webtoon [query]
-?
-?¦---?? CONVERTER ? ??
-☞ *Command:-* toimage [reply stick]
-☞ *Command:-* sticker [reply img|gif]
-☞ *Command:-* emojimix [moji+moji]
-☞ *Command:-* tovideo [reply img]
-☞ *Command:-* togif [reply stick]
-☞ *Command:-* tourl [reply img]
-☞ *Command:-* tovn [reply aud]
-☞ *Command:-* tomp3 [reply vn]
-☞ *Command:-* toaudio [reply vid]
-☞ *Command:-* ebinary [reply txt]
-☞ *Command:-* dbinary [reply txt]
-☞ *Command:-* styletext [text]
-?¦--?? DATABASE ? ??
-☞ *Command:-* setcmd
-☞ *Command:-* listcmd
-☞ *Command:-* delcmd
-☞ *Command:-* lockcmd
-☞ *Command:-* addmsg
-☞ *Command:-* listmsg
-☞ *Command:-* getmsg
-☞ *Command:-* delmsg
-??? *Created By ${ownername}*  ?????`
+❦❦❦ *${botname}* ❦❦❦
+ 📌 •---» MAIN «---• 📌
+☞ Command:- alive
+☞ Command:- script
+☞ Command:- speedtest
+☞ Command:- ping
+☞ Command:- owner
+☞ Command:- menu
+☞ Command:- delete
+☞ Command:- chatinfo
+☞ Command:- quoted
+☞ Command:- listpc
+☞ Command:- listgc
+☞ Command:- donate
+☞ Command:- report 
+ 👤 •---» OWNER «---• 👤
+☞ Command:- chat 
+☞ Command:- join
+☞ Command:- leave
+☞ Command:- block 
+☞ Command:- unblock 
+☞ Command:- bcgroup 
+☞ Command:- bcall 
+☞ Command:- setppbot 
+☞ Command:- setexif
+  🔊 •---» GROUP «---• 🔊   
+☞ Command:- grouplink
+☞ Command:- ephemeral 
+☞ Command:- setgcpp 
+☞ Command:- setname 
+☞ Command:- setdesc 
+☞ Command:- group 
+☞ Command:- editinfo 
+☞ Command:- add 
+☞ Command:- kick 
+☞ Command:- hidetag 
+☞ Command:- tagall
+☞ Command:- antilink 
+☞ Command:- mute 
+☞ Command:- promote 
+☞ Command:- demote 
+   📥 •---» DOWNLOADER «---• 📥
+☞ Command:- ytmp3 
+☞ Command:- ytmp4 
+☞ Command:- getmusic 
+☞ Command:- getvideo 
+☞ Command:- soundcloud 
+    🔎 •---» SEARCHER «---• 🔎
+☞ Command:- play 
+☞ Command:- song 
+☞ Command:- yts 
+☞ Command:- google 
+☞ Command:- gimage 
+☞ Command:- pinterest 
+☞ Command:- wallpaper 
+☞ Command:- wikimedia 
+☞ Command:- ytsearch 
+☞ Command:- ringtone 
+☞ Command:- webtoon 
+  🔄  •---» CONVERTER «---• 🔄 
+☞ Command:- toimage [reply stick]
+☞ Command:- sticker [reply img|gif]
+☞ Command:- emojimix [moji+moji]
+☞ Command:- tovideo [reply img]
+☞ Command:- togif [reply stick]
+☞ Command:- tourl [reply img]
+☞ Command:- tovn [reply aud]
+☞ Command:- tomp3 [reply vn]
+☞ Command:- toaudio [reply vid]
+☞ Command:- ebinary [reply txt]
+☞ Command:- dbinary [reply txt]
+☞ Command:- styletext [text]
+•---» DATABASE «---•
+☞ *Command:- setcmd
+☞ Command:- listcmd
+☞ Command:- delcmd
+☞ Command:- lockcmd
+☞ Command:- addmsg
+☞ Command:- listmsg
+☞ Command:- getmsg
+☞ Command:- delmsg
+🔊🔊 *Created By ${ownername}* 🔊🔊`
     const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
                         hydratedTemplate: {
@@ -3685,12 +3684,12 @@ case 'allmenu': {
                             hydratedFooterText: `${pushname}`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'facebook??',
+                                    displayText: 'facebook',
                                     url: `${myweb}`
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '??Owner??',
+                                    displayText: '??Owner',
                                     id: `${prefix}owner`
                                 }
                             }]
@@ -3703,51 +3702,45 @@ break
 case 'mainmenu':
 var unicorn = await getBuffer(picak+'Main Menu')
 await Robot_MD.send5ButImg(from, `` + '' + ' ', `
-??? ${botname} ???? 
-?+-?? MAIN ?
-?¦ ${prefix}alive
-?¦ ${prefix}script
-?¦ ${prefix}speedtest
-?¦ ${prefix}ping
-?¦ ${prefix}owner
-?¦ ${prefix}menu
-?¦ ${prefix}delete
-?¦ ${prefix}chatinfo
-?¦ ${prefix}quoted
-?¦ ${prefix}listpc
-?¦ ${prefix}listgc
-?¦ ${prefix}donate
-?¦ ${prefix}report [bug]
+❦❦❦ *${botname}* ❦❦❦ 
+  •---» MAIN «---•
+☞ Command:- alive
+☞ Command:- script
+☞ Command:- speedtest
+☞ Command:- ping
+☞ Command:- owner
+☞ Command:- menu
+☞ Command:- delete
+☞ Command:- chatinfo
+☞ Command:- quoted
+☞ Command:- listpc
+☞ Command:- listgc
+☞ Command:- donate
+☞ Command:- repor
 ?+-------------?
-???? ${pushname} ???`,unicorn, [{"urlButton": {"displayText": "facebook ??","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}},{"quickReplyButton": {"displayText": "??Donate??","id": 'donate'}},{"quickReplyButton": {"displayText": "??Owner??","id": 'owner'}}] )
+???? ${pushname} ???`,unicorn, [{"urlButton": {"displayText": "facebook ","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}},{"quickReplyButton": {"displayText": "??Donate??","id": 'donate'}},{"quickReplyButton": {"displayText": "??Owner??","id": 'owner'}}] )
 break
 
 case 'grupmenu': case 'groupmenu':
 var unicorn = await getBuffer(picak+'Group Menu')
 await Robot_MD.send5ButImg(from, `` + '' + ' ', `
-??? ${botname} ???? 
-?+-?? GROUP ?	        
-?¦${prefix}grouplink
-?¦${prefix}ephemeral [option]
-?¦${prefix}setgcpp [image]
-?¦${prefix}setname [text]
-?¦${prefix}setdesc [text]
-?¦${prefix}group [text]
-?¦${prefix}editinfo [option]
-?¦${prefix}add [user]
-?¦${prefix}kick [reply/tag]
-?¦${prefix}hidetag [text]
-?¦${prefix}tagall [text]
-?¦${prefix}antilink [on/off]
-?¦${prefix}mute [on/off]
-?¦${prefix}promote [reply/tag]
-?¦${prefix}demote [reply/tag]
-?¦${prefix}vote
-?¦${prefix}devote
-?¦${prefix}upvote
-?¦${prefix}checkvote
-?¦${prefix}delvote
-?+-------------?
+❦❦❦ *${botname}* ❦❦❦
+  🔊 •---» GROUP «---• 🔊   
+☞ Command:- grouplink
+☞ Command:- ephemeral 
+☞ Command:- setgcpp 
+☞ Command:- setname 
+☞ Command:- setdesc 
+☞ Command:- group 
+☞ Command:- editinfo 
+☞ Command:- add 
+☞ Command:- kick 
+☞ Command:- hidetag 
+☞ Command:- tagall
+☞ Command:- antilink 
+☞ Command:- mute 
+☞ Command:- promote 
+☞ Command:- demote 
 ???? ${pushname} ???`,unicorn, [{"urlButton": {"displayText": "facebook","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}},{"quickReplyButton": {"displayText": "??Donate??","id": 'donate'}},{"quickReplyButton": {"displayText": "??Owner??","id": 'owner'}}] )
 break
 
@@ -3758,63 +3751,53 @@ break
 case 'ownermenu':
 var unicorn = await getBuffer(picak+'Owner Menu')
 await Robot_MD.send5ButImg(from, `` + '' + ' ', `
-??? ${botname} ???? 
-?+-?? OWNER ?	        
-?¦${prefix}grouplink
-?¦${prefix}ephemeral [option]
-?¦${prefix}setgcpp [image]
-?¦${prefix}setname [text]
-?¦${prefix}setdesc [text]
-?¦${prefix}group [text]
-?¦${prefix}editinfo [option]
-?¦${prefix}add [user]
-?¦${prefix}kick [reply/tag]
-?¦${prefix}hidetag [text]
-?¦${prefix}tagall [text]
-?¦${prefix}antilink [on/off]
-?¦${prefix}mute [on/off]
-?¦${prefix}promote [reply/tag]
-?¦${prefix}demote [reply/tag]
-?¦${prefix}vote
-?¦${prefix}devote
-?¦${prefix}upvote
-?¦${prefix}checkvote
-?¦${prefix}delvote
-?+-------------?
+❦❦❦ *${botname}* ❦❦❦ 
+👤 •---» OWNER «---• 👤	        
+☞ Command:- grouplink
+☞ Command:- ephemeral [option]
+☞ Command:- setgcpp [image]
+☞ Command:- setname [text]
+☞ Command:- setdesc [text]
+☞ Command:- group [text]
+☞ Command:- editinfo [option]
+☞ Command:- add [user]
+☞ Command:- kick [reply/tag]
+☞ Command:- hidetag [text]
+☞ Command:- tagall [text]
+☞ Command:- antilink [on/off]
+☞ Command:- mute [on/off]
+☞ Command:- promote [reply/tag]
+☞ Command:- demote [reply/tag]
 ???? ${pushname} ???`,unicorn, [{"urlButton": {"displayText": "facebook","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}},{"quickReplyButton": {"displayText": "??Donate??","id": 'donate'}},{"quickReplyButton": {"displayText": "??Owner??","id": 'owner'}}] )
 break
 case 'downloadmenu':
 var unicorn = await getBuffer(picak+'Downloader Menu')
 await Robot_MD.send5ButImg(from, `` + '' + ' ', `
-??? ${botname} ???? 
-?+-?? DOWNLOADER ?	        
-?¦${prefix}ytmp3 [url|quality]
-?¦${prefix}ytmp4 [url|quality]
-?¦${prefix}getmusic [yt link]
-?¦${prefix}getvideo [yt link]
-?¦${prefix}umma [query]
-?¦${prefix}joox [query]
-?¦${prefix}soundcloud [url]
-?+-------------?
+❦❦❦ *${botname}* ❦❦❦ 
+   📥 •---» DOWNLOADER «---• 📥
+☞ Command:- ytmp3 
+☞ Command:- ytmp4 
+☞ Command:- getmusic 
+☞ Command:- getvideo 
+☞ Command:- soundcloud 
 ???? ${pushname} ???`,unicorn, [{"urlButton": {"displayText": "facebook","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}},{"quickReplyButton": {"displayText": "??Donate??","id": 'donate'}},{"quickReplyButton": {"displayText": "??Owner??","id": 'owner'}}] )
 break
 case 'searchmenu':
 var unicorn = await getBuffer(picak+'Search Menu')
 await Robot_MD.send5ButImg(from, `` + '' + ' ', `
-??? ${botname} ???? 
-?+--?? SEARCHER ?	        
-?¦${prefix}play [query]
-?¦${prefix}song [query]
-?¦${prefix}yts [query]
-?¦${prefix}google [query]
-?¦${prefix}gimage [query]
-?¦${prefix}pinterest [query]
-?¦${prefix}wallpaper [query]
-?¦${prefix}wikimedia [query]
-?¦${prefix}ytsearch [query]
-?¦${prefix}ringtone [query]
-?¦${prefix}webtoon [query]
-?+-------------?
+❦❦❦ *${botname}* ❦❦❦
+    🔎 •---» SEARCHER «---• 🔎
+☞ Command:- play 
+☞ Command:- song 
+☞ Command:- yts 
+☞ Command:- google 
+☞ Command:- gimage 
+☞ Command:- pinterest 
+☞ Command:- wallpaper 
+☞ Command:- wikimedia 
+☞ Command:- ytsearch 
+☞ Command:- ringtone 
+☞ Command:- webtoon 
 ???? ${pushname} ???`,unicorn, [{"urlButton": {"displayText": "facebook","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}},{"quickReplyButton": {"displayText": "??Donate??","id": 'donate'}},{"quickReplyButton": {"displayText": "??Owner??","id": 'owner'}}] )
 break
 
@@ -3822,7 +3805,7 @@ break
 case 'textpromenu':
 var unicorn = await getBuffer(picak+'Text Pro Menu')
 await Robot_MD.send5ButImg(from, `` + '' + ' ', `
-??? ${botname} ???? 
+❦❦❦ *${botname}* ❦❦❦ 
 ?+-?? TEXT PRO ?	        
 ?¦ ${prefix}3dchristmas [txt]
 ?¦ ${prefix}3ddeepsea [txt]
@@ -3861,43 +3844,42 @@ break
 case 'convertmenu':
 var unicorn = await getBuffer(picak+'Converter Menu')
 await Robot_MD.send5ButImg(from, `` + '' + ' ', `
-??? ${botname} ???? 
-?+--?? CONVERTER ?	        
-?¦ ${prefix}toimage [reply stick]
-?¦ ${prefix}sticker [reply img|gif]
-?¦ ${prefix}emojimix [moji+moji]
-?¦ ${prefix}tovideo [reply img]
-?¦ ${prefix}togif [reply stick]
-?¦ ${prefix}tourl [reply media]
-?¦ ${prefix}tovn [reply aud]
-?¦ ${prefix}tomp3 [reply vn]
-?¦ ${prefix}toaudio [reply vid]
-?¦ ${prefix}ebinary [reply txt]
-?¦ ${prefix}dbinary [reply txt]
-?+-------------?
+❦❦❦ *${botname}* ❦❦❦ 
+  🔄  •---» CONVERTER «---• 🔄 
+☞ Command:- toimage [reply stick]
+☞ Command:- sticker [reply img|gif]
+☞ Command:- emojimix [moji+moji]
+☞ Command:- tovideo [reply img]
+☞ Command:- togif [reply stick]
+☞ Command:- tourl [reply img]
+☞ Command:- tovn [reply aud]
+☞ Command:- tomp3 [reply vn]
+☞ Command:- toaudio [reply vid]
+☞ Command:- ebinary [reply txt]
+☞ Command:- dbinary [reply txt]
+☞ Command:- styletext [text]
 ???? ${pushname} ???`,unicorn, [{"urlButton": {"displayText": "facebook","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}},{"quickReplyButton": {"displayText": "??Donate??","id": 'donate'}},{"quickReplyButton": {"displayText": "??Owner??","id": 'owner'}}] )
 break
 case 'databasemenu':
 var unicorn = await getBuffer(picak+'Database Menu')
 await Robot_MD.send5ButImg(from, `` + '' + ' ', `
-??? ${botname} ???? 
-?+---?? DATABASE ?	        
-?¦ ${prefix}setcmd
-?¦ ${prefix}listcmd
-?¦ ${prefix}delcmd
-?¦ ${prefix}lockcmd
-?¦ ${prefix}addmsg
-?¦ ${prefix}listmsg
-?¦ ${prefix}getmsg
-?¦ ${prefix}delmsg
-?+-------------?
+❦❦❦ *${botname}* ❦❦❦ 
+🔒 •---» DATABASE «---• 🔒
+☞ *Command:- setcmd
+☞ Command:- listcmd
+☞ Command:- delcmd
+☞ Command:- lockcmd
+☞ Command:- addmsg
+☞ Command:- listmsg
+☞ Command:- getmsg
+☞ Command:- delmsg
 ???? ${pushname} ???`,unicorn, [{"urlButton": {"displayText": "facebook","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}},{"quickReplyButton": {"displayText": "??Donate??","id": 'donate'}},{"quickReplyButton": {"displayText": "??Owner??","id": 'owner'}}] )
 break
 
 case 'islamicmenu':
 var unicorn = await getBuffer(picak+'Islamic Menu')
 await Robot_MD.send5ButImg(from, `` + '' + ' ', `
-??? ${botname} ???? 
+❦❦❦ *${botname}* ❦❦❦
 ?+--?? ISLAMIC ?	        
 ?¦${prefix}juzamma
 ?+-------------?
@@ -3906,20 +3888,20 @@ break
 case 'voicechangermenu':
 var unicorn = await getBuffer(picak+'Voice Changer Menu')
 await Robot_MD.send5ButImg(from, `` + '' + ' ', `
-??? ${botname} ???? 
-?+--?? VOICE CHANGER ?	        
-?¦${prefix}bass [reply aud]
-?¦${prefix}blown [reply aud]
-?¦${prefix}deep [reply aud]
-?¦${prefix}earrape [reply aud]
-?¦${prefix}fast [reply aud]
-?¦${prefix}fat [reply aud]
-?¦${prefix}nightcore [reply aud]
-?¦${prefix}reverse [reply aud]
-?¦${prefix}robot [reply aud]
-?¦${prefix}slow [reply aud]
-?¦${prefix}squirrel [reply aud]
-?+-------------?
+❦❦❦ *${botname}* ❦❦❦ 
+ 🔁 •---»VOICE CHANGER «---• 🔁	        
+☞ Command:- bass [reply aud]
+☞ Command:- blown [reply aud]
+☞ Command:- deep [reply aud]
+☞ Command:- earrape [reply aud]
+☞ Command:- fast [reply aud]
+☞ Command:- fat [reply aud]
+☞ Command:- nightcore [reply aud]
+☞ Command:- reverse [reply aud]
+☞ Command:- robot [reply aud]
+☞ Command:- slow [reply aud]
+☞ Command:- squirrel [reply aud]
+
 ???? ${pushname} ???`,unicorn, [{"urlButton": {"displayText": "facebook","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}},{"quickReplyButton": {"displayText": "??Donate??","id": 'donate'}},{"quickReplyButton": {"displayText": "??Owner??","id": 'owner'}}] )
 break
 		
@@ -3927,7 +3909,7 @@ break
                   if (!text) return reply(`Where is the link?\nExample: ${prefix + command} https://fb.watch/eEudfpC3Wz/`)
                   if (!q.includes('fb')) return reply(`මෙය Facebook Link එකක් නොවේ. කරුණාකර වලංගු Link එකක් ඇතුලත් කරන්න!`)
                   if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
-  let noh = require('@bochilteam/scraper')                
+  let noh = require('./lib/scraper')                 
   noh.savefrom(`${text}`).then(async (anu) => {  
   Robot_MD.sendMessage(m.chat, { audio: { url: anu.url[0].url }, mimetype: 'audio/mp4',fileName: 'Facebook mp3' }, { quoted: m }) 
     
@@ -3948,7 +3930,7 @@ break
                                
                              
                                
-               let noh = require('@bochilteam/scraper')                
+               let noh = require('./lib/scraper')                 
                noh.savefrom(`${text}`).then(async (anu) => {  
                
                Robot_MD.sendMessage(m.chat, { video: { url: anu.url[0].url }, mimetype: 'video/mp4', fileName: 'Facebook Video', caption: ' \n 𝐂𝐑𝐄𝐀𝐓𝐄 𝐁𝐘\n \n 𝗤𝗨𝗘𝗘𝗡 𝗔𝗦𝗛𝗜𝗬𝗔  ᴹᴰ'}, { quoted: m })     
@@ -3968,7 +3950,7 @@ break
                                            
                                          
                                            
-                           let noh = require('@bochilteam/scraper')                
+                           let noh = require('./lib/scraper')                 
                            noh.savefrom(`${text}`).then(async (anu) => {  
                            
                            Robot_MD.sendMessage(m.chat, { document: { url: anu.url[0].url }, mimetype: 'audio/mpeg',fileName: 'Facebook Audio Dcument' }, { quoted: m })       
@@ -3985,7 +3967,7 @@ break
                                if (!text) return reply(`Where is the link?\nExample: ${prefix + command} https://fb.watch/eEudfpC3Wz/`)
                                if (!q.includes('f')) return reply(`මෙය Facebook Link එකක් නොවේ. කරුණාකර වලංගු Link එකක් ඇතුලත් කරන්න!`)
                                if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
-                               let noh = require('@bochilteam/scraper')                 
+                               let noh = require('./lib/scraper')                  
                                       noh.savefrom(`${text}`).then(async (anu) => { 
                                let buttons = [
                                 {buttonId: `fbvideo ${text}`, buttonText: {displayText: '♬Video♬'}, type: 1},
@@ -4021,7 +4003,7 @@ break
                                       if (!text) return reply(`Where is the link?`)
                                       if (!q.includes('tiktok.com')) return reply(`මෙය Tiktok Link එකක් නොවේ. කරුණාකර වලංගු Link එකක් ඇතුලත් කරන්න!`)
                                       if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
-                                      let noh = require('@bochilteam/scraper')                
+                                      let noh = require('./lib/scraper')                 
                                       noh.savefrom(`${text}`).then(async (anu) => { 
                                          let buttons = [
                                             {buttonId: `tiktokvideo ${text}`, buttonText: {displayText: '♬Video♬'}, type: 1},
@@ -4057,7 +4039,7 @@ break
                                            if (!q.includes('tiktok')) return reply(`මෙය Tiktok Link එකක් නොවේ. කරුණාකර වලංගු Link එකක් ඇතුලත් කරන්න!`)
                                            if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
                                            
-                           let noh = require('@bochilteam/scraper')                
+                           let noh = require('./lib/scraper')                 
                            noh.savefrom(`${text}`).then(async (anu) => {  
                            
                             Robot_MD.sendMessage(m.chat, { audio: { url: anu.url[0].url }, mimetype: 'audio/mp4',fileName: 'Tik Tok mp3' }, { quoted: m })      
@@ -4075,7 +4057,7 @@ break
                                                        if (!text) return reply(`Where is the link?\nExample: ${prefix + command} https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
                                                        if (!q.includes('tiktok')) return reply(`මෙය Tiktok Link එකක් නොවේ. කරුණාකර වලංගු Link එකක් ඇතුලත් කරන්න!`)
                                                        if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
-                                       let noh = require('@bochilteam/scraper')                
+                                       let noh = require('./lib/scraper')                 
                                        noh.savefrom(`${text}`).then(async (anu) => {  
                                        
                                         Robot_MD.sendMessage(m.chat, { document: { url: anu.url[0].url }, mimetype: 'audio/mpeg',fileName: 'Tik Tok Audio Dcument' }, { quoted: m })     
@@ -4093,7 +4075,7 @@ break
                                                        if (!text) return reply(`Where is the link?\nExample: ${prefix + command} https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
                                                        if (!q.includes('tiktok')) return reply(`මෙය Tiktok Link එකක් නොවේ. කරුණාකර වලංගු Link එකක් ඇතුලත් කරන්න!`)
                                                        if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`කරුණාකර නිවැරදි ලින්ක් එකක් ඇතුලත් කරන්න..`)
-                                       let noh = require('@bochilteam/scraper')                
+                                       let noh = require('./lib/scraper')               
                                        noh.savefrom(`${text}`).then(async (anu) => {  
                                        
                                        Robot_MD.sendMessage(m.chat, { video: { url: anu.url[0].url }, mimetype: 'video/mp4', fileName: 'Tik Tok Video', caption: ' \n Create By\n \n Mr-Robot-MD'}, { quoted: m })     
