@@ -2064,15 +2064,13 @@ break
                     image: { url: anu.thumbnail },
                     caption: `
 ♪♪ Title : ${anu.title}
-♪♪ Ext : Search
-♪♪ ID : ${anu.videoId}
-♪♪ Duration : ${anu.timestamp}
-♪♪ Viewes : ${anu.views}
-♪♪ Uploaded On : ${anu.ago}
-♪♪ Author : ${anu.author.name}
-♪♪ Channel : ${anu.author.url}
-♪♪ Description : ${anu.description}
-♪♪ Url : ${anu.url}`,
+🎶Duration : ${anu.timestamp}
+👀 Viewes : ${anu.views}
+🪄 Uploaded On : ${anu.ago}
+💫 Author : ${anu.author.name}
+⚡ Channel : ${anu.author.url}
+📝Description : ${anu.description}
+📝 Url : ${anu.url}`,
                     footer: Robot_MD.user.name,
                     buttons: buttons,
                     headerType: 4
@@ -2096,16 +2094,12 @@ break
                 let buttonMessage = {
                     image: { url: anu.thumbnail },
                     caption: `
-🎶 𝒯𝒾𝓉𝓁ℯ : ${anu.title}
-🎶 ℰ𝓍𝓉 : Search
-🎶 ℐ𝒟 : ${anu.videoId}
-🎶 𝒟𝓊𝓇𝒶𝓉𝒾ℴ𝓃 : ${anu.timestamp}
-👀 𝒱𝒾ℯ𝓌ℯ𝓈 : ${anu.views}
-🪄 𝒰𝓅𝓁ℴ𝒶𝒹ℯ𝒹 𝒪𝓃 : ${anu.ago}
-💫 𝒜𝓊𝓉𝒽ℴ𝓇 : ${anu.author.name}
-⚡ 𝒞𝒽𝒶𝓃𝓃ℯ𝓁 : ${anu.author.url}
-📝 𝒟ℯ𝓈𝒸𝓇𝒾𝓅𝓉𝒾ℴ𝓃 : ${anu.description}
-📝 𝒰𝓇𝓁 : ${anu.url}`,
+♪♪ Title : ${anu.title}
+🎶Duration : ${anu.timestamp}
+👀 Viewes : ${anu.views}
+🪄 Uploaded On : ${anu.ago}
+💫 Author : ${anu.author.name}
+⚡ Channel : ${anu.author.url}`,
                     footer: Robot_MD.user.name,
                     buttons: buttons,
                     headerType: 4
@@ -2121,7 +2115,7 @@ break
                 let quality = args[1] ? args[1] : '256kbps'
                 let media = await yta(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                Robot_MD.sendImage(m.chat, media.thumb, `🎶 𝒯𝒾𝓉𝓁ℯ : ${media.title}\n📌 ℱ𝒾𝓁ℯ 𝒮𝒾𝓏ℯ : ${media.filesizeF}\n📝 𝒰𝓇𝓁 : ${isUrl(text)}\n🎶 ℰ𝓍𝓉  : MP3\n📢 ℛℯ𝓈ℴ𝓁𝓊𝓉𝒾ℴ𝓃 : ${args[1] || '256kbps'}`, m)
+                Robot_MD.sendImage(m.chat, media.thumb, `♪♪ Title : ${media.title}\n📌 File Size : ${media.filesizeF}\n📝 Url : ${isUrl(text)}\n🎶 Ext  : MP3\n📢 📢 Resolution  : ${args[1] || '256kbps'}`, m)
                 Robot_MD.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
@@ -2132,7 +2126,7 @@ break
                 let quality = args[1] ? args[1] : '256kbps'
                 let media = await yta(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                Robot_MD.sendImage(m.chat, media.thumb, `🎶 𝒯𝒾𝓉𝓁ℯ : ${media.title}\n📌 ℱ𝒾𝓁ℯ 𝒮𝒾𝓏ℯ : ${media.filesizeF}\n📝 𝒰𝓇𝓁 : ${isUrl(text)}\n🎶 ℰ𝓍𝓉  : MP3\n📢 ℛℯ𝓈ℴ𝓁𝓊𝓉𝒾ℴ𝓃 : ${args[1] || '256kbps'}`, m)
+                Robot_MD.sendImage(m.chat, media.thumb, `♪♪ Title : ${media.title}\n📌 File Size : ${media.filesizeF}\n📝 Url : ${isUrl(text)}\n🎶 Ext  : MP3\n📢 Resolution  : ${args[1] || '256kbps'}`, m)
                 Robot_MD.sendMessage(m.chat, { document: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
 	    }
 	    break
@@ -2142,7 +2136,7 @@ break
                 let quality = args[1] ? args[1] : '480p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🎶 𝒯𝒾𝓉𝓁ℯ : ${media.title}\n📌 ℱ𝒾𝓁ℯ 𝒮𝒾𝓏ℯ: ${media.filesizeF}\n📝 𝒰𝓇𝓁 : ${isUrl(text)}\n🎶 ℰ𝓍𝓉  : Mp4\n📢 ℛℯ𝓈ℴ𝓁𝓊𝓉𝒾ℴ𝓃 : ${args[1] || '480p'}` }, { quoted: m })
+                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `♪♪ Title : ${media.title}\n📌 File Size : ${media.filesizeF}\n📝 Url : ${isUrl(text)}\n🎶 ℰ𝓍𝓉  : Mp4\n📢 Resolution  : ${args[1] || '480p'}` }, { quoted: m })
             }
             break
 		
@@ -2154,7 +2148,7 @@ break
                 let quality = args[1] ? args[1] : '720p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🎶 𝒯𝒾𝓉𝓁ℯ : ${media.title}\n📌 ℱ𝒾𝓁ℯ 𝒮𝒾𝓏ℯ: ${media.filesizeF}\n📝 𝒰𝓇𝓁 : ${isUrl(text)}\n🎶 ℰ𝓍𝓉  : MP4\n📢 ℛℯ𝓈ℴ𝓁𝓊𝓉𝒾ℴ𝓃 : ${args[1] || '480p'}` }, { quoted: m })
+                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `♪♪ Title : ${media.title}\n📌 File Size : ${media.filesizeF}\n📝 Url : ${isUrl(text)}\n🎶 Ext  : MP4\n📢 📢 Resolution  : ${args[1] || '480p'}` }, { quoted: m })
             }
             break
 		
@@ -2165,7 +2159,7 @@ break
                 let quality = args[1] ? args[1] : '256kbps'
                 let media = await yta(urls[text - 1], quality)
                 if (media.filesize >= 100000) return reply('File Over Limit '+util.format(media))
-                Robot_MD.sendImage(m.chat, media.thumb, `🎶 𝒯𝒾𝓉𝓁ℯ : ${media.title}\n📌 ℱ𝒾𝓁ℯ 𝒮𝒾𝓏ℯ : ${media.filesizeF}\n📝 𝒰𝓇𝓁 : ${urls[text - 1]}\n🎶 ℰ𝓍𝓉 : MP3\n📢 ℛℯ𝓈ℴ𝓁𝓊𝓉𝒾ℴ𝓃 : ${args[1] || '256kbps'}`, m)
+                Robot_MD.sendImage(m.chat, media.thumb, `♪♪ Title : ${media.title}\n📌 File Size : ${media.filesizeF}\n📝 Url : ${urls[text - 1]}\n🎶 Ext : MP3\n📢 Resolution  : ${args[1] || '256kbps'}`, m)
                 Robot_MD.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
@@ -2179,7 +2173,7 @@ break
                 let quality = args[1] ? args[1] : '480p'
                 let media = await ytv(urls[text - 1], quality)
                 if (media.filesize >= 100000) return reply('File Over Limit '+util.format(media))
-                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🎶 𝒯𝒾𝓉𝓁ℯ : ${media.title}\n📌 ℱ𝒾𝓁ℯ 𝒮𝒾𝓏ℯ : ${media.filesizeF}\n📝 𝒰𝓇𝓁 : ${urls[text - 1]}\n🎶 ℰ𝓍𝓉  : MP3\n📢 ℛℯ𝓈ℴ𝓁𝓊𝓉𝒾ℴ𝓃 : ${args[1] || '480p'}` }, { quoted: m })
+                Robot_MD.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `♪♪ Title : ${media.title}\n📌 File Size : ${media.filesizeF}\n📝 Url : ${urls[text - 1]}\n🎶 ℰ𝓍𝓉  : MP3\n📢 Resolution : ${args[1] || '480p'}` }, { quoted: m })
             }
             break
             case 'pinterest': {
@@ -3718,7 +3712,7 @@ await Robot_MD.send5ButImg(from, `` + '' + ' ', `
 ☞ Command:- donate
 ☞ Command:- repor
 ?+-------------?
-???? ${pushname} ???`,unicorn, [{"urlButton": {"displayText": "facebook ","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}},{"quickReplyButton": {"displayText": "??Donate??","id": 'donate'}},{"quickReplyButton": {"displayText": "??Owner??","id": 'owner'}}] )
+🫵🏻🫵🏼 ${pushname} 🫵🏻🫵🏼`,unicorn, [{"urlButton": {"displayText": "facebook ","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}}] )
 break
 
 case 'grupmenu': case 'groupmenu':
@@ -3741,7 +3735,7 @@ await Robot_MD.send5ButImg(from, `` + '' + ' ', `
 ☞ Command:- mute 
 ☞ Command:- promote 
 ☞ Command:- demote 
-???? ${pushname} ???`,unicorn, [{"urlButton": {"displayText": "facebook","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}},{"quickReplyButton": {"displayText": "??Donate??","id": 'donate'}},{"quickReplyButton": {"displayText": "??Owner??","id": 'owner'}}] )
+🫵🏻🫵🏼 ${pushname} 🫵🏻🫵🏼`,unicorn, [{"urlButton": {"displayText": "facebook","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}}] )
 break
 
 
@@ -3768,7 +3762,7 @@ await Robot_MD.send5ButImg(from, `` + '' + ' ', `
 ☞ Command:- mute [on/off]
 ☞ Command:- promote [reply/tag]
 ☞ Command:- demote [reply/tag]
-???? ${pushname} ???`,unicorn, [{"urlButton": {"displayText": "facebook","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}},{"quickReplyButton": {"displayText": "??Donate??","id": 'donate'}},{"quickReplyButton": {"displayText": "??Owner??","id": 'owner'}}] )
+🫵🏻🫵🏼 ${pushname} 🫵🏻🫵🏼`,unicorn, [{"urlButton": {"displayText": "facebook","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}}] )
 break
 case 'downloadmenu':
 var unicorn = await getBuffer(picak+'Downloader Menu')
@@ -3780,7 +3774,7 @@ await Robot_MD.send5ButImg(from, `` + '' + ' ', `
 ☞ Command:- getmusic 
 ☞ Command:- getvideo 
 ☞ Command:- soundcloud 
-???? ${pushname} ???`,unicorn, [{"urlButton": {"displayText": "facebook","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}},{"quickReplyButton": {"displayText": "??Donate??","id": 'donate'}},{"quickReplyButton": {"displayText": "??Owner??","id": 'owner'}}] )
+🫵🏻🫵🏼 ${pushname} 🫵🏻🫵🏼`,unicorn, [{"urlButton": {"displayText": "facebook","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}}] )
 break
 case 'searchmenu':
 var unicorn = await getBuffer(picak+'Search Menu')
@@ -3798,7 +3792,7 @@ await Robot_MD.send5ButImg(from, `` + '' + ' ', `
 ☞ Command:- ytsearch 
 ☞ Command:- ringtone 
 ☞ Command:- webtoon 
-???? ${pushname} ???`,unicorn, [{"urlButton": {"displayText": "facebook","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}},{"quickReplyButton": {"displayText": "??Donate??","id": 'donate'}},{"quickReplyButton": {"displayText": "??Owner??","id": 'owner'}}] )
+🫵🏻🫵🏼 ${pushname} 🫵🏻🫵🏼`,unicorn, [{"urlButton": {"displayText": "facebook","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}}] )
 break
 
 
@@ -3839,7 +3833,7 @@ await Robot_MD.send5ButImg(from, `` + '' + ' ', `
 ?¦ ${prefix}blackpink [txt]
 ?¦ ${prefix}gluetext [txt]
 ?+-------------?
-???? ${pushname} ???`,unicorn, [{"urlButton": {"displayText": "facebook","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}},{"quickReplyButton": {"displayText": "??Donate??","id": 'donate'}},{"quickReplyButton": {"displayText": "??Owner??","id": 'owner'}}] )
+🫵🏻🫵🏼 ${pushname} 🫵🏻🫵🏼`,unicorn, [{"urlButton": {"displayText": "facebook","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}}] )
 break
 case 'convertmenu':
 var unicorn = await getBuffer(picak+'Converter Menu')
@@ -3858,7 +3852,7 @@ await Robot_MD.send5ButImg(from, `` + '' + ' ', `
 ☞ Command:- ebinary [reply txt]
 ☞ Command:- dbinary [reply txt]
 ☞ Command:- styletext [text]
-???? ${pushname} ???`,unicorn, [{"urlButton": {"displayText": "facebook","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}},{"quickReplyButton": {"displayText": "??Donate??","id": 'donate'}},{"quickReplyButton": {"displayText": "??Owner??","id": 'owner'}}] )
+🫵🏻🫵🏼 ${pushname} 🫵🏻🫵🏼`,unicorn, [{"urlButton": {"displayText": "facebook","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}}] )
 break
 case 'databasemenu':
 var unicorn = await getBuffer(picak+'Database Menu')
@@ -3873,7 +3867,7 @@ await Robot_MD.send5ButImg(from, `` + '' + ' ', `
 ☞ Command:- listmsg
 ☞ Command:- getmsg
 ☞ Command:- delmsg
-???? ${pushname} ???`,unicorn, [{"urlButton": {"displayText": "facebook","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}},{"quickReplyButton": {"displayText": "??Donate??","id": 'donate'}},{"quickReplyButton": {"displayText": "??Owner??","id": 'owner'}}] )
+🫵🏻🫵🏼 ${pushname} 🫵🏻🫵🏼`,unicorn, [{"urlButton": {"displayText": "facebook","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}}] )
 break
 
 case 'islamicmenu':
@@ -3883,7 +3877,7 @@ await Robot_MD.send5ButImg(from, `` + '' + ' ', `
 ?+--?? ISLAMIC ?	        
 ?¦${prefix}juzamma
 ?+-------------?
-???? ${pushname} ???`,unicorn, [{"urlButton": {"displayText": "facebook","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}},{"quickReplyButton": {"displayText": "??Donate??","id": 'donate'}},{"quickReplyButton": {"displayText": "??Owner??","id": 'owner'}}] )
+🫵🏻🫵🏼 ${pushname} 🫵🏻🫵🏼`,unicorn, [{"urlButton": {"displayText": "facebook","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}}] )
 break
 case 'voicechangermenu':
 var unicorn = await getBuffer(picak+'Voice Changer Menu')
@@ -3902,7 +3896,7 @@ await Robot_MD.send5ButImg(from, `` + '' + ' ', `
 ☞ Command:- slow [reply aud]
 ☞ Command:- squirrel [reply aud]
 
-???? ${pushname} ???`,unicorn, [{"urlButton": {"displayText": "facebook","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}},{"quickReplyButton": {"displayText": "??Donate??","id": 'donate'}},{"quickReplyButton": {"displayText": "??Owner??","id": 'owner'}}] )
+🫵🏻🫵🏼 ${pushname} 🫵🏻🫵🏼`,unicorn, [{"urlButton": {"displayText": "facebook","url": `${myweb}`}},{"urlButton": {"displayText": "Github","url": `${sc}`}}] )
 break
 		
 		case 'fbaudio': {
