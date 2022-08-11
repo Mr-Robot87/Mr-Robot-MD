@@ -2049,6 +2049,7 @@ break
         break
 	    
             case 'play': case 'song': case 'ytplay': {
+		Robot_MD.sendMessage(from, { react: { text: `👀`, key: m.key }})
                 if (!text) return reply(`Example : ${prefix + command} ?????? ???? ???? ????`)
                 let yts = require("yt-search")
                 let search = await yts(text)
