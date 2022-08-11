@@ -209,6 +209,14 @@ const reply = (teks) => {
             Robot_MD.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Mr-Robot`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./Mr_Robot_Media/robot.jpg`),"sourceUrl": "https://i.ibb.co/fq9trJx/logo.jpg"}}}, { quoted: m})
         }
 	
+	  //react function
+const reactionMessage = {
+                    react: {
+                        text: args[0],
+                        key: { remoteJid: m.chat, fromMe: true, id: quoted.id }
+                    }
+                }
+
         //Public & Self\\
         if (!Robot_MD.public) {
             if (!m.key.fromMe) return
