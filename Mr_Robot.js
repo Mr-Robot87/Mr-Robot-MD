@@ -2048,7 +2048,7 @@ break
         }
         break
 	    
-            case 'play': case 'song': case 'ytplay'case 'ytmp3': case 'getmusic': case 'ytaudio' : {
+	case 'play': case 'song': case 'ytplay': case 'ytmp3': case 'getmusic': case 'ytaudio' : {
 		Robot_MD.sendMessage(from, { react: { text: `👀`, key: m.key }})
                 if (!text) return reply(`Example : ${prefix + command} ?????? ???? ???? ????`)
                 let yts = require("yt-search")
@@ -3364,9 +3364,7 @@ reply("Success Changing Menu To "+q)
 		
                  
 	case 'list': case 'menu':{
-                           	let buttons = [
-        {buttonId: `${prefix}command`, buttonText: {displayText: ' All Menu '}, type: 1}]
-	Robot_MD.sendMessage(from, { react: { text: `👀`, key: m.key }})
+       
     let buttonMessage = {
         image: { url: 'https://i.ibb.co/fq9trJx/logo.jpg'},
    
