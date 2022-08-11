@@ -2935,37 +2935,7 @@ break
                 Robot_MD.sendMessage(m.chat, { video: { url: anu.result }, caption: `Download From ${text}` }, { quoted: m })
             }
             break
-            case 'umma': case 'ummadl': {
-	        if (!text) return reply(`Example : ${prefix + command} https://umma.id/channel/video/post/gus-arafat-sumber-kecewa-84464612933698`)
-                let { umma } = require('./lib) scraper')
-		let anu = await umma(isUrl(text)[0])
-		if (anu.type == 'video') {
-		    let buttons = [
-                        {buttonId: `ytmp3 ${anu.media[0]} 128kbps`, buttonText: {displayText: '??Audio??'}, type: 1},
-                        {buttonId: `ytmp4 ${anu.media[0]} 360p`, buttonText: {displayText: '???Video???'}, type: 1}
-                    ]
-		    let buttonMessage = {
-		        image: { url: anu.author.profilePic },
-			caption: `
-♪ Title : ${anu.title}
-♪  Author : ${anu.author.name}
-♪  Like : ${anu.like}
-♪ Caption : ${anu.caption}
-♪  Url : ${anu.media[0]}
-To Download Media, Please Click One Of The Buttons Below Or Enter The ytmp3/ytmp4 Command With The Url Above
-`,
-			footer: Robot_MD.user.name,
-			buttons,
-			headerType: 4
-		    }
-		    Robot_MD.sendMessage(m.chat, buttonMessage, { quoted: m })
-		} else if (anu.type == 'image') {
-		    anu.media.map(async (url) => {
-		        Robot_MD.sendMessage(m.chat, { image: { url }, caption: `?? Title : ${anu.title}\n?? Author : ${anu.author.name}\n?? Like : ${anu.like}\n?? Caption : ${anu.caption}` }, { quoted: m })
-		    })
-		}
-	    }
-	    break
+           
         case 'ringtone': {
 		if (!text) return reply(`Example : ${prefix + command} black rover`)
         let { ringtone } = require('./lib/scraper')
@@ -3390,6 +3360,7 @@ reply("Success Changing Menu To "+q)
 	case 'list': case 'menu':{
                            	let buttons = [
         {buttonId: `${prefix}command`, buttonText: {displayText: ' All Menu '}, type: 1}]
+	Robot_MD.sendMessage(from, { react: { text: `👀`, key: m.key }})
     let buttonMessage = {
         image: { url: 'https://i.ibb.co/fq9trJx/logo.jpg'},
    
