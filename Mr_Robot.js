@@ -2048,37 +2048,7 @@ break
         }
         break
 	    
-            case 'play': case 'song': case 'ytplay': {
-		Robot_MD.sendMessage(from, { react: { text: `👀`, key: m.key }})
-                if (!text) return reply(`Example : ${prefix + command} ?????? ???? ???? ????`)
-                let yts = require("yt-search")
-                let search = await yts(text)
-                let anu = search.videos[0]
-                let buttons = [
-                    {buttonId: `ytmp3 ${anu.url}`, buttonText: {displayText: '♬Audio♬'}, type: 1},
-                    
-                  {buttonId: `document ${anu.url}`, buttonText: {displayText: '♬Document♬'}, type: 1}] 
-                    
-                  
-                
-                let buttonMessage = {
-                    image: { url: anu.thumbnail },
-                    caption: `
-♪♪ Title : ${anu.title}
-🎶Duration : ${anu.timestamp}
-👀 Viewes : ${anu.views}
-🪄 Uploaded On : ${anu.ago}
-💫 Author : ${anu.author.name}
-⚡ Channel : ${anu.author.url}
-📝Description : ${anu.description}
-📝 Url : ${anu.url}`,
-                    footer: Robot_MD.user.name,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                Robot_MD.sendMessage(m.chat, buttonMessage, { quoted: m })
-            }
-            break
+           
 		
 		case 'video': {
                 if (!text) return reply(`Example : ${prefix + command} ?????? ???? ???? ????`)
@@ -2111,7 +2081,11 @@ break
             break
 		
 		
-	    case 'ytmp3': case 'getmusic': case 'ytaudio': {
+	    case 'song': case 'getmusic': case 'ytaudio': {
+		if (!text) return reply(`Example : ${prefix + command} ?????? ???? ???? ????`)
+                let yts = require("yt-search")
+                let search = await yts(text)
+                let anu = search.videos[0]
                 let { yta } = require('./lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 256kbps`)
                 let quality = args[1] ? args[1] : '256kbps'
