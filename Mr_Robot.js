@@ -2048,7 +2048,37 @@ break
         }
         break
 	    
-           
+            case 'play': case 'song': case 'ytplay': {
+		Robot_MD.sendMessage(from, { react: { text: `👀`, key: m.key }})
+                if (!text) return reply(`Example : ${prefix + command} ?????? ???? ???? ????`)
+                let yts = require("yt-search")
+                let search = await yts(text)
+                let anu = search.videos[0]
+                let buttons = [
+                    {buttonId: `ytmp3 ${anu.url}`, buttonText: {displayText: '♬Audio♬'}, type: 1},
+                    
+                  {buttonId: `document ${anu.url}`, buttonText: {displayText: '♬Document♬'}, type: 1}] 
+                    
+                  
+                
+                let buttonMessage = {
+                    image: { url: anu.thumbnail },
+                    caption: `
+♪♪ Title : ${anu.title}
+🎶Duration : ${anu.timestamp}
+👀 Viewes : ${anu.views}
+🪄 Uploaded On : ${anu.ago}
+💫 Author : ${anu.author.name}
+⚡ Channel : ${anu.author.url}
+📝Description : ${anu.description}
+📝 Url : ${anu.url}`,
+                    footer: Robot_MD.user.name,
+                    buttons: buttons,
+                    headerType: 4
+                }
+                Robot_MD.sendMessage(m.chat, buttonMessage, { quoted: m })
+            }
+            break
 		
 		case 'video': {
                 if (!text) return reply(`Example : ${prefix + command} ?????? ???? ???? ????`)
@@ -2081,15 +2111,11 @@ break
             break
 		
 		
-	    case 'song': case 'getmusic': case 'ytaudio': {
-		if (!text) return reply(`Example : ${prefix + command} ?????? ???? ???? ????`)
-                let yts = require("yt-search")
-                let search = await yts(text)
-                let anu = search.videos[0]
+	    case 'ytmp3': case 'getmusic': case 'ytaudio': {
                 let { yta } = require('./lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 256kbps`)
                 let quality = args[1] ? args[1] : '256kbps'
-                
+                let media = await yta(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
                 Robot_MD.sendImage(m.chat, media.thumb, `♪♪ Title : ${media.title}\n📌 File Size : ${media.filesizeF}\n📝 Url : ${isUrl(text)}\n🎶 Ext  : MP3\n📢 📢 Resolution  : ${args[1] || '256kbps'}`, m)
                 Robot_MD.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
