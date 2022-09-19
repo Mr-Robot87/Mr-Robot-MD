@@ -1241,9 +1241,9 @@ Robot_MD.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${san
       case 'fuck':
       case 'sexx':
       case 'pinnaya':
-      case '???????':
-      case '??????':
-      case '??????':
+      case 'pakayo':
+      case 'hukapam':
+      case 'payiya':
       case '????':
       case '?????':
       case '????? ':
@@ -1879,6 +1879,7 @@ break
         }
         break
             case 'emojimix': {
+		    Robot_MD.sendMessage(from, { react: { text: `🔄`, key: m.key }})
 	        if (!text) return replay(`Example : ${prefix + command} ??+??`)
 		let [emoji1, emoji2] = text.split`+`
 		let anu = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emoji1)}_${encodeURIComponent(emoji2)}`)
@@ -1889,6 +1890,7 @@ break
 	    }
 	    break
             case 'toimage': case 'toimg': {
+		    Robot_MD.sendMessage(from, { react: { text: `🔄`, key: m.key }})
                 if (!quoted) return reply(`Reply Image`)
                 if (!/webp/.test(mime)) reply(`Reply Sticker With Caption *${prefix + command}*`)
                 reply(mess.wait)
@@ -1904,6 +1906,7 @@ break
             }
             break
 	        case 'tomp4': case 'tovideo': {
+			Robot_MD.sendMessage(from, { react: { text: `🔄`, key: m.key }})
                 if (!quoted) reply(`Reply Image`)
                 if (!/webp/.test(mime)) return replay(`Reply Sticker With Caption *${prefix + command}*`)
                 reply(mess.wait)
@@ -1915,6 +1918,7 @@ break
             }
             break
             case 'toaud': case 'toaudio': {
+		    Robot_MD.sendMessage(from, { react: { text: `🔄`, key: m.key }})
             if (!/video/.test(mime) && !/audio/.test(mime)) return replay(`Send/Reply Video/Audio You Want To Use As Audio With Caption ${prefix + command}`)
             if (!quoted) return reply(`Send/Reply Video/Audio You Want To Convert To Audio With Caption ${prefix + command}`)
             reply(mess.wait)
@@ -1925,6 +1929,7 @@ break
             }
             break
             case 'tomp3': {
+		    Robot_MD.sendMessage(from, { react: { text: `🔄`, key: m.key }})
             if (/document/.test(mime)) return reply(`Send/Reply Video/Audio You Want to Convert Into MP3 With Caption ${prefix + command}`)
             if (!/video/.test(mime) && !/audio/.test(mime)) return replay(`Send/Reply Video/Audio You Want To Convert into MP3 With Caption ${prefix + command}`)
             if (!quoted) return replay(`Send/Reply Video/Audio You Want To Convert Into MP3 With Caption ${prefix + command}`)
@@ -1996,6 +2001,7 @@ break
 	    }
 	    break
 	    case 'yts': case 'ytsearch': {
+		 Robot_MD.sendMessage(from, { react: { text: `🔍`, key: m.key }})
                 if (!text) return replay(`Example : ${prefix + command} Anime Story Whatsapp`)
                 let yts = require("yt-search")
                 let search = await yts(text)
@@ -2008,6 +2014,7 @@ break
             }
             break
         case 'google': {
+		Robot_MD.sendMessage(from, { react: { text: `🔍`, key: m.key }})
                 if (!text) return reply(`Example : ${prefix + command} gojo shiba inu`)
                 let google = require('google-it')
                 google({'query': text}).then(res => {
@@ -2022,6 +2029,7 @@ break
                 }
                 break
         case 'gimage': case 'googleimage': {
+		Robot_MD.sendMessage(from, { react: { text: `🔍`, key: m.key }})
         if (!text) return reply(`Example : ${prefix + command} gojo`)
         let gis = require('g-i-s')
         gis(text, async (error, result) => {
@@ -2156,6 +2164,7 @@ break
 		
 	        		
 	    case 'getmusicxxx': {
+		    Robot_MD.sendMessage(from, { react: { text: `🎧`, key: m.key }})
                 let { yta } = require('./lib/y2mate')
 		let urls = quoted.text.match(new RegExp(/(?:https?:\/\/)?(?:youtu\.be\/|(?:www\.|m\.)?youtube\.com\/(?:watch|v|embed|shorts)(?:\.php)?(?:\?.*v=|\/))([a-zA-Z0-9\_-]+)/, 'gi'))
                 let quality = args[1] ? args[1] : '128kbps'
@@ -2166,6 +2175,7 @@ break
             }
             break
             case 'getvideoxxx': {
+		    Robot_MD.sendMessage(from, { react: { text: `🎬`, key: m.key }})
                 let { ytv } = require('./lib/y2mate')
                 if (!text) throw `Example : ${prefix + command} 1`
                 if (!m.quoted) throw 'Reply Message'
@@ -2797,31 +2807,16 @@ break
                 }
             }
             break
-	        case 'tiktokd': case 'tiktoknowmx': {
+	        
+         
+            case 'tiktok': case 'tk': {
+		    Robot_MD.sendMessage(from, { react: { text: `🌀`, key: m.key }})
                 if (!text) return reply(`Enter Query Link!`)
                 reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/downloader/tiktok', { url: text }, 'apikey'))
                 let buttons = [
-                    {buttonId: `tiktokwm ${text}`, buttonText: {displayText: '??With Watermark??'}, type: 1},
-                    {buttonId: `tiktokmp3 ${text}`, buttonText: {displayText: '??Audio??'}, type: 1}
-                ]
-                let buttonMessage = {
-                    video: { url: anu.result.nowatermark },
-                    caption: `Download From ${text}`,
-                    footer: 'Press The Button Below',
-                    buttons: buttons,
-                    headerType: 5
-                }
-                Robot_MD.sendMessage(m.chat, buttonMessage, { quoted: m })
-            }
-            break
-            case 'tiktokwmx': case 'tiktokwatermarkx': {
-                if (!text) return reply(`Enter Query Link!`)
-                reply(mess.wait)
-                let anu = await fetchJson(api('zenz', '/downloader/tiktok', { url: text }, 'apikey'))
-                let buttons = [
-                    {buttonId: `tiktoknowm ${text}`, buttonText: {displayText: '??No Watermark??'}, type: 1},
-                    {buttonId: `tiktokmp3 ${text}`, buttonText: {displayText: '??Audio??'}, type: 1}
+                    {buttonId: `tiktoknowm ${text}`, buttonText: {displayText: 'video'}, type: 1},
+                    {buttonId: `tiktokmp3 ${text}`, buttonText: {displayText: 'Audio'}, type: 1}
                 ]
                 let buttonMessage = {
                     video: { url: anu.result.watermark },
@@ -2833,13 +2828,13 @@ break
                 Robot_MD.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
-            case 'tiktokmp3x': case 'tiktokaudiox': {
+            case 'tik': case 'tikto': {
                 if (!text) return reply(`Enter Query Link!`)
                 reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/downloader/musically', { url: text }, 'apikey'))
                 let buttons = [
-                    {buttonId: `tiktoknowm ${text}`, buttonText: {displayText: '??No Watermark??'}, type: 1},
-                    {buttonId: `tiktokwm ${text}`, buttonText: {displayText: '??With Watermark??'}, type: 1}
+                    {buttonId: `tiktoknowm ${text}`, buttonText: {displayText: 'No Watermark'}, type: 1},
+                    {buttonId: `tiktokwm ${text}`, buttonText: {displayText: 'With Watermark'}, type: 1}
                 ]
                 let buttonMessage = {
                     text: `Download From ${text}`,
@@ -2893,7 +2888,7 @@ break
                 reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/api/downloader/twitter', { url: text }, 'apikey'))
                 let buttons = [
-                    {buttonId: `twittermp3 ${text}`, buttonText: {displayText: '??Audio??'}, type: 1}
+                    {buttonId: `twittermp3 ${text}`, buttonText: {displayText: 'Audio'}, type: 1}
                 ]
                 let buttonMessage = {
                     video: { url: anu.result.HD || anu.result.SD },
@@ -2910,7 +2905,7 @@ break
                 reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/api/downloader/twitter', { url: text }, 'apikey'))
                 let buttons = [
-                    {buttonId: `twitter ${text}`, buttonText: {displayText: '???Video???'}, type: 1}
+                    {buttonId: `twitter ${text}`, buttonText: {displayText: 'Video'}, type: 1}
                 ]
                 let buttonMessage = {
 		    image: { url: anu.result.thumb },
@@ -2923,11 +2918,12 @@ break
                 Robot_MD.sendMessage(m.chat, { audio: { url: anu.result.audio } }, { quoted: msg })
             }
             break
-	        case 'fbdlx': case 'fbx': case 'facebookx': {
+	        case 'fb': case 'f': case 'facebook': {
+			Robot_MD.sendMessage(from, { react: { text: `🔎`, key: m.key }})
                 if (!text) return reply(`Enter Query Link!`)
                 reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/api/downloader/facebook', { url: text }, 'apikey'))
-                Robot_MD.sendMessage(m.chat, { video: { url: anu.result.url }, caption: `?? Title : ${anu.result.title}`}, { quoted: m })
+                Robot_MD.sendMessage(m.chat, { video: { url: anu.result.url }, caption: `📌 Title : ${anu.result.title}`}, { quoted: m })
             }
             break
 	        case 'pindl': case 'pinterestdl': {
@@ -3455,9 +3451,10 @@ break
 
 
             case 'robot': case 'alive': {
+		    
 		          let buttons = [
         {buttonId: `${prefix}command`, buttonText: {displayText: 'list menu '}, type: 1}]
-       
+       Robot_MD.sendMessage(from, { react: { text: `🙋‍♂️`, key: m.key }})
     let buttonMessage = {
         image: { url: 'https://i.ibb.co/fq9trJx/logo.jpg'},
     caption:`
