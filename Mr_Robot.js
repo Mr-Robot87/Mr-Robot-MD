@@ -2045,7 +2045,7 @@ break
         break
 	    
             case 'play': case 'song': case 'ytplay': {
-		Robot_MD.sendMessage(from, { react: { text: `👀`, key: m.key }})
+		Robot_MD.sendMessage(from, { react: { text: `🎧`, key: m.key }})
                 if (!text) return reply(`Example : ${prefix + command} ?????? ???? ???? ????`)
                 let yts = require("yt-search")
                 let search = await yts(text)
@@ -2077,6 +2077,7 @@ break
             break
 		
 		case 'video': {
+		Robot_MD.sendMessage(from, { react: { text: `🎬`, key: m.key }})
                 if (!text) return reply(`Example : ${prefix + command} ?????? ???? ???? ????`)
                 let yts = require("yt-search")
                 let search = await yts(text)
@@ -2108,6 +2109,7 @@ break
 		
 		
 	    case 'ytmp3': case 'getmusic': case 'ytaudio': {
+		 Robot_MD.sendMessage(from, { react: { text: `🎧`, key: m.key }})
                 let { yta } = require('./lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
                 let quality = args[1] ? args[1] : '128kbps'
@@ -2119,6 +2121,7 @@ break
             break
 		
 	    case 'document': {
+		 Robot_MD.sendMessage(from, { react: { text: `🎧`, key: m.key }})
 		 let { yta } = require('./lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
                 let quality = args[1] ? args[1] : '128kbps'
@@ -2129,6 +2132,7 @@ break
 	    }
 	    break
             case 'ytmp4': case 'getvideo': case 'ytvideo': {
+		Robot_MD.sendMessage(from, { react: { text: `🎬`, key: m.key }})
                 let { ytv } = require('./lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 480p`)
                 let quality = args[1] ? args[1] : '480p'
@@ -3358,7 +3362,7 @@ reply("Success Changing Menu To "+q)
 	case 'list': case 'menu':{
                            	let buttons = [
         {buttonId: `${prefix}command`, buttonText: {displayText: ' All Menu '}, type: 1}]
-	Robot_MD.sendMessage(from, { react: { text: `👀`, key: m.key }})
+	Robot_MD.sendMessage(from, { react: { text: `🛡️`, key: m.key }})
     let buttonMessage = {
         image: { url: 'https://i.ibb.co/fq9trJx/logo.jpg'},
    
@@ -3401,6 +3405,7 @@ break
 		case  'logo':{
                            	let buttons = [
         {buttonId: `${prefix}menu`, buttonText: {displayText: ' Menu '}, type: 1}]
+	Robot_MD.sendMessage(from, { react: { text: `🎇`, key: m.key }})
     let buttonMessage = {
         image: { url: 'https://i.ibb.co/fq9trJx/logo.jpg'},
    
